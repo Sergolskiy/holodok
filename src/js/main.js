@@ -51,7 +51,7 @@ $(document).ready(function () {
 
 
   $('.header__mobile-menu').click(function () {
-    $('.header__menu').toggleClass('open');
+    $('.mobile-menu').toggleClass('open');
     $(this).toggleClass('active');
   });
 
@@ -157,11 +157,12 @@ $(document).ready(function () {
   });
 
 
+
+
   if($(document).width() < 992){
-    $('.service__items').slick({
+    $('.products__items-slider').slick({
       infinite: true,
-      // centerMode: true,
-      variableWidth: true,
+      variableWidth: false,
       arrows: false,
       dots: true,
       responsive: [
@@ -173,88 +174,19 @@ $(document).ready(function () {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
-
-    $('.medicals__items').slick({
-      infinite: true,
-      // centerMode: true,
-      variableWidth: true,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 380,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
-
-
-    $('.programs__slider').slick({
-      infinite: true,
-      // centerMode: true,
-      variableWidth: true,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2
           }
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-  }
-
-  if($(document).width() < 1030){
-    $('.advantage__items').slick({
-      infinite: true,
-      variableWidth: true,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 1040,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
       ]
     });
   }

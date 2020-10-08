@@ -1,6 +1,55 @@
 header.header
   .header__inner.site-container
+    .mobile-menu
+      .mobile-menu__inner
+        .mobile-menu__top
+          a(href="#").mobile-menu__close
+            include ../../img/svg/close.svg
+          a(href="#").mobile-menu__lang
+            include ../../img/svg/flag.svg
+          a(href="#").mobile-menu__user
+            include ../../img/svg/login.svg
+        .mobile-menu__category
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Распродажа
+              include ../../img/svg/sale.svg
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Новинки
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Актуально
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Распродажа
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Новинки
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Актуально
+          .mobile-menu__categoty-item
+            a(href="#").mobile-menu__categoty-link Распродажа
+
+        .mobile-menu__user-items
+          a(href="#").mobile-menu__user-title Личный кабинет
+            include ../../img/svg/login.svg
+          .mobile-menu__user-item
+            a(href="#").mobile-menu__user-link Персональные данные
+          .mobile-menu__user-item
+            a(href="#").mobile-menu__user-link Адрес доставки
+          .mobile-menu__user-item
+            a(href="#").mobile-menu__user-link история заказов
+          .mobile-menu__user-item
+            a(href="#").mobile-menu__user-link изменение пароля
+
+        .mobile-menu__other
+          a(href="#").mobile-menu__other-link Доставка и оплата
+          a(href="#").mobile-menu__other-link О нас
+          a(href="#").mobile-menu__other-link Блог
+          a(href="#").mobile-menu__other-link Контакты
+
     .header__top
+      .header__mobile-menu.tablet
+        include ../../img/svg/Menu.svg
+      .header__mobile-search.tablet
+        a(href="#")
+          include ../../img/svg/search.svg
       .header__left
         .header__top-menu
           ul.header__top-menu-items
