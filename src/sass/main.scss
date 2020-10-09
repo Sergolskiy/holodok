@@ -164,6 +164,11 @@ input{
     @include for-992{
       padding-top: 12px;
     }
+
+    @include for-550{
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
   }
 
   &__left{
@@ -228,6 +233,14 @@ input{
   &__logo{
     img{
       max-width: 100%;
+
+      @include for-992{
+        height: 35px;
+      }
+
+      @include for-550{
+        height: 22px;
+      }
     }
 
     @include for-992{
@@ -266,6 +279,12 @@ input{
     position: relative;
     margin-right: 30px;
 
+    @include for-550{
+      svg{
+        width: 18px;
+      }
+    }
+
     span{
       display: flex;
       justify-content: center;
@@ -288,11 +307,23 @@ input{
         width: 15px;
         height: 15px;
       }
+
+      @include for-550{
+        top: -7px;
+        right: -9px;
+        font-size: 10px;
+      }
     }
   }
 
   &__cart{
     position: relative;
+
+    @include for-550{
+      svg{
+        width: 18px;
+      }
+    }
 
     span{
       display: flex;
@@ -314,6 +345,12 @@ input{
         font-size: 11px;
         width: 15px;
         height: 15px;
+      }
+
+      @include for-550{
+        top: -7px;
+        right: -9px;
+        font-size: 10px;
       }
     }
   }
@@ -430,6 +467,70 @@ input{
     }
   }
 
+  &__search {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: 0.4s;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    z-index: -10;
+
+    &.open{
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 2;
+    }
+  }
+
+  &__search-inner{
+    background: #1A2F34;
+    padding: 6px 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-input{
+    width: 100%;
+
+    input{
+      height: 28px;
+      width: 100%;
+      padding-left: 15px;
+      font-size: 13px;
+
+      &::placeholder{
+        font-size: 13px;
+        padding-bottom: 5px;
+        color: #777777;
+      }
+    }
+  }
+
+  &__search-button{
+    input{
+      background: url("../img/svg/search.svg") center center no-repeat;
+      background-size: contain;
+      border: 0;
+      width: 14px;
+      height: 14px;
+      margin-left: -20px;
+      padding: 0;
+      margin-top: 2px;
+      opacity: 0.7;
+    }
+  }
+
+  &__search-close{
+    width: 20px;
+    height: 20px;
+    background: url("../img/svg/close-search.svg") center center no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+  }
 }
 
 .mobile-menu{
@@ -438,14 +539,40 @@ input{
   left: 0;
   top: 0;
   height: 100vh;
-  z-index: 20;
-  background: rgba(0, 0, 0, 69%);
+  background: rgba(19, 19, 19, 0.7);
+
+  visibility: hidden;
+  z-index: -10;
+  opacity: 0;
+  transition: 0.5s;
+
+  &.open{
+    z-index: 20;
+    opacity: 1;
+    visibility: visible;
+
+    .mobile-menu__inner{
+      transform: translateX(0);
+    }
+  }
 
   &__inner{
     min-height: 100vh;
-    max-width: 75%;
+    max-width: 85%;
     background: white;
     padding: 20px;
+    overflow: auto;
+    max-height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.4s 0.1s;
+
+    .mobile-menu__lang svg{
+      width: 17px;
+    }
+
+    .mobile-menu__user svg{
+      width: 20px;
+    }
   }
 
   &__top{
@@ -535,6 +662,7 @@ input{
 
     svg{
       margin-left: 10px;
+      width: 20px;
     }
   }
 
@@ -572,6 +700,10 @@ input{
 
   @include for-992{
     margin-top: 10px;
+  }
+
+  @include for-550{
+    margin-top: 0;
   }
 
   &__inner{
@@ -614,6 +746,10 @@ input{
 .products{
   margin-bottom: 80px;
 
+  @include for-550{
+    margin-bottom: 20px;
+  }
+
   &__inner{
 
   }
@@ -624,6 +760,10 @@ input{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 45px;
+
+    @include for-550{
+      margin-bottom: 15px;
+    }
   }
 
   &__item{
@@ -643,6 +783,10 @@ input{
     font-size: 16px;
     line-height: 25px;
     color: #1A2F34;
+
+    @include for-550{
+      font-size: 13px;
+    }
   }
 }
 
@@ -661,7 +805,7 @@ input{
     position: relative;
 
     @include for-768{
-      padding: 40px 0px 25px 0px;
+      padding: 40px 0px 10px 0px;
     }
   }
 
@@ -808,7 +952,7 @@ input{
       }
 
       @include for-420{
-        margin-left: 3px;
+        margin-left: 5px;
         width: 15px;
       }
     }
@@ -818,11 +962,14 @@ input{
 
 .site-bunner{
   &__inner{
-    margin: 0 -15px;
+    @include for-1200{
+      margin: 0 -15px;
+    }
   }
   &__img{
     img{
       max-width: 100%;
+      width: 100%;
     }
   }
 }
@@ -830,12 +977,25 @@ input{
 
 
 .footer{
-  padding-bottom: 50px;
   padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (max-width: 650px) {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
 
   &__inner{
     display: flex;
     justify-content: space-between;
+
+    @include for-992{
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
   }
 
   &__left{
@@ -843,7 +1003,14 @@ input{
   }
 
   &__logo{
-
+    @media (max-width: 650px) {
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 140px;
+    }
+    img{
+      width: 100%;
+    }
   }
 
   &__rights{
@@ -851,6 +1018,10 @@ input{
     line-height: 20px;
     color: #666666;
     margin: 25px 0;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__social{
@@ -862,6 +1033,10 @@ input{
         margin: 0;
       }
     }
+
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__center{
@@ -870,9 +1045,26 @@ input{
     max-width: 525px;
     justify-content: space-between;
     margin: 0 15px;
+
+    @media (max-width: 800px) {
+      max-width: 400px;
+    }
+
+    @media (max-width: 650px) {
+      margin: 0;
+      order: 10;
+      max-width: 100%;
+    }
+
+
   }
 
   &__menu-col{
+    &:last-child{
+      @include for-420{
+        display: none;
+      }
+    }
 
   }
 
@@ -896,11 +1088,22 @@ input{
     font-size: 17px;
     line-height: 25px;
     color: #111111;
+
+    @media (max-width: 650px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 
   &__right{
     width: 100%;
     max-width: 360px;
+
+    @media (max-width: 650px) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__subscribe{
@@ -913,6 +1116,10 @@ input{
     line-height: 25px;
     color: #111111;
     margin-bottom: 25px;
+
+    @media (max-width: 650px) {
+      font-size: 17px;
+    }
   }
 
   &__subscribe-input{
@@ -954,10 +1161,18 @@ input{
     line-height: 20px;
     color: #111111;
     margin-bottom: 30px;
+
+    @media (max-width: 650px) {
+      order: -1;
+    }
   }
 
   &__partners{
     display: flex;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__partners-item{
@@ -968,6 +1183,24 @@ input{
 
   }
 
+  &__bottom{
+    display: none;
+
+    @media (max-width: 650px) {
+      order: 20;
+      margin-top: 40px;
+      display: block;
+
+      .footer__social {
+        display: block;
+      }
+      .footer__rights {
+        display: block;
+        max-width: 145px;
+      }
+    }
+  }
+
 }
 
 
@@ -976,6 +1209,10 @@ input{
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @include for-550{
+      margin-top: -5px;
+    }
 
     li{
       padding: 0;

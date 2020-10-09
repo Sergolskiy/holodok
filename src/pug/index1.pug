@@ -21,7 +21,9 @@ block content
           //.home-top__title Новинки
           //.home-top__subtitle Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
           //.home-top__link Перейти
-          img(src='./img/bunner.png' alt='img')
+          picture
+            source(media='(max-width: 500px)' srcset='./img/bunner-mob.png')
+            img(class='b-lazy' data-blazy='./img/bunner.png' src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt='img')
 
 
     .category-block
@@ -101,7 +103,9 @@ block content
     .site-bunner
       .site-container.site-bunner__inner
         .site-bunner__img
-          img(src='./img/bunner.png' alt='img')
+          picture
+            source(media='(max-width: 500px)' srcset='./img/bunner-mob.png')
+            img(class='b-lazy' data-blazy='./img/bunner.png' src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt='img')
 
     .category-block
       .site-container.category-block__inner
@@ -181,7 +185,9 @@ block content
     .site-bunner
       .site-container.site-bunner__inner
         .site-bunner__img
-          img(src='./img/bunner.png' alt='img')
+          picture
+            source(media='(max-width: 500px)' srcset='./img/bunner-mob.png')
+            img(class='b-lazy' data-blazy='./img/bunner.png' src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt='img')
 
     .category-block
       .site-container.category-block__inner
