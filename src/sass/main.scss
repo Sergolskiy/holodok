@@ -148,6 +148,17 @@ input{
   }
 }
 
+.site-title{
+
+}
+
+.section-title{
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 30px;
+  color: #111111;
+}
+
 .header{
   position: relative;
 
@@ -577,6 +588,52 @@ input{
     margin-left: 10px;
   }
 }
+
+.breadcrumbs{
+  margin-top: 20px;
+  margin-bottom: 34px;
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #828282;
+    margin-right: 8px;
+    position: relative;
+    transition: .3s;
+
+    &:hover {
+      color: #111111;
+    }
+
+    &:before {
+      content: "/";
+      margin-right: 8px;
+    }
+
+    &:first-child{
+      color: #111111;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child{
+
+      cursor: auto;
+      pointer-events: none;
+    }
+  }
+
+}
+
 
 .mobile-menu{
   position: fixed;
