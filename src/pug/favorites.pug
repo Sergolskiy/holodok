@@ -1,0 +1,110 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Блог
+
+    .favorites
+      .favorites__inner.site-container
+        .site-title ИЗБРАННОЕ
+        .products
+          .products__items
+            .products__item.product
+              .product__inner
+                .product__favorites-top
+                  .product__favorites-count Товар  1
+                  a(href="#").product__favorites-remove
+                    include ../img/svg/close.svg
+                .product__img
+                  a(href="#")
+                    img(src='./img/product.webp' alt='img')
+                a(href='#').product__title Название товара Название  12133  товара Название товара
+                .product__bottom.product__bottom--column
+                  .product__price 6090
+                    span грн
+                  .product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+                  a(href="#").product__add-cart Добавить в
+                    include ../img/svg/cart.svg
+            .products__item.product
+              .product__inner
+                .product__favorites-top
+                  .product__favorites-count Товар  2
+                  a(href="#").product__favorites-remove
+                    include ../img/svg/close.svg
+                .product__img
+                  a(href="#")
+                    img(src='./img/product.webp' alt='img')
+                a(href='#').product__title Название товара Название  12133  товара Название товара
+                .product__bottom.product__bottom--column
+                  .product__price 6090
+                    span грн
+                  .product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+                  a(href="#").product__add-cart Добавить в
+                    include ../img/svg/cart.svg
+            .products__item.product
+              .product__inner
+                .product__favorites-top
+                  .product__favorites-count Товар  3
+                  a(href="#").product__favorites-remove
+                    include ../img/svg/close.svg
+                .product__img
+                  a(href="#")
+                    img(src='./img/product.webp' alt='img')
+                a(href='#').product__title Название товара Название  12133  товара Название товара
+                .product__bottom.product__bottom--column
+                  .product__price 6090
+                    span грн
+                  .product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+                  a(href="#").product__add-cart Добавить в
+                    include ../img/svg/cart.svg
+            .products__item.product.no-stock
+              .product__inner
+                .product__favorites-top
+                  .product__favorites-count Товар  4
+                  a(href="#").product__favorites-remove
+                    include ../img/svg/close.svg
+                .product__img
+                  a(href="#")
+                    img(src='./img/product.webp' alt='img')
+                a(href='#').product__title Название товара Название  12133  товара Название товара
+                .product__bottom.product__bottom--column
+                  .product__price 6090
+                    span грн
+                  .product__no-stock Нет в наличии
+
+
+
+
+
+

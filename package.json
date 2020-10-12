@@ -52,6 +52,7 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.3",
     "rellax": "^1.12.1",
+    "select2": "^4.0.13",
     "slick-carousel": "^1.8.1"
   }
 }

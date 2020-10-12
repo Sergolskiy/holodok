@@ -1,0 +1,229 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Блог
+
+    .catalog
+      .site-container.catalog__inner
+        .catalog__left
+          .filter
+            .filter__category-name НАЗВАНИЕ КАТЕГОРИИ
+            a(href='#').filter__up-category Вернуться ко всем категориям
+            .filter__categories
+              .filter__categories-item.filter__categories-item--active
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+              .filter__categories-item
+                a(href='#').filter__categories-link Название подкатегории
+
+        .catalog__right
+          .catalog-sort
+            .catalog-sort__popular
+            .catalog-sort__count
+          .products
+            .products__items
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like.product__like--active
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+              .products__item.product
+                .product__inner
+                  .product__img
+                    a(href="#")
+                      img(src='./img/product.webp' alt='img')
+                  .product__in-stock В наличии
+                  a(href="#").product__like
+                    include ../img/svg/satarFill.svg
+                  a(href='#').product__title Название товара Название  12133  товара Название товара
+                  a(href="#").product__revievs 6 отзывов
+                  .product__bottom
+                    .product__price 6090
+                      span грн
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+
+          .pagination
+            .pagination__inner
+              .pagination__item
+                a(href='#').pagination__link.pagination__link--left
+                  include ../img/svg/arrow-paginate.svg
+              .pagination__item
+                a(href='#').pagination__link.active 1
+              .pagination__item
+                a(href='#').pagination__link 2
+              .pagination__item
+                a(href='#').pagination__link 3
+              .pagination__item
+                a(href='#').pagination__link 4
+              .pagination__item
+                a(href='#').pagination__link 5
+              .pagination__item
+                a(href='#').pagination__link 6
+              .pagination__item
+                a(href='#').pagination__link 7
+              .pagination__item
+                span.pagination__dots ...
+              .pagination__item
+                a(href='#').pagination__link.pagination__link--right
+                  include ../img/svg/arrow-paginate.svg
+
+
+
+
+
+
+
+
+
