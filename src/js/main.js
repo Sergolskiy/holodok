@@ -83,6 +83,10 @@ $(document).ready(function () {
       $('.footer__subscribe-input input[type="text"]').addClass('error');
     }
   });
+  $('.filter__category-name').click(function (e) {
+      $('.filter').toggleClass('open');
+
+  });
 
   $('.product-card-slider-js').slick({
     slidesToShow: 1,
