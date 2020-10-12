@@ -85,7 +85,10 @@ $(document).ready(function () {
   });
   $('.filter__category-name').click(function (e) {
       $('.filter').toggleClass('open');
+  });
 
+  $('.select-two').select2({
+    minimumResultsForSearch: -1
   });
 
   $('.product-card-slider-js').slick({
