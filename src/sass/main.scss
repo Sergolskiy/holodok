@@ -224,6 +224,11 @@ input{
     font-size: 15px;
     line-height: 20px;
     color: #111111;
+    transition: 0.3s;
+
+    &:hover{
+      color: #FF5722;
+    }
 
     @include for-992{
       font-size: 13px;
@@ -269,6 +274,16 @@ input{
   &__user{
     margin-right: 30px;
 
+    svg path{
+      transition: 0.3s;
+    }
+
+    &:hover{
+      svg path{
+        fill: #ff5722;
+      }
+    }
+
     @include for-992{
       margin-right: 20px;
       display: none;
@@ -284,6 +299,16 @@ input{
         width: 18px;
       }
     }
+    svg path{
+      transition: 0.3s;
+    }
+
+    &:hover{
+      svg path{
+        fill: #ff5722;
+      }
+    }
+
 
     span{
       display: flex;
@@ -324,6 +349,17 @@ input{
         width: 18px;
       }
     }
+
+    svg path{
+      transition: 0.3s;
+    }
+
+    &:hover{
+      svg path{
+        fill: #ff5722;
+      }
+    }
+
 
     span{
       display: flex;
@@ -438,6 +474,11 @@ input{
     font-size: 15px;
     line-height: 19px;
     color: #1A2F34;
+    transition: 0.3s;
+
+    &:hover{
+      color: #FF5722;
+    }
 
     @include for-992{
       font-size: 12px;
@@ -447,6 +488,10 @@ input{
   &__submenu-img{
     position: relative;
     display: flex;
+
+    img{
+      max-width: none;
+    }
 
     @include for-992{
       max-width: 300px;
@@ -713,6 +758,7 @@ input{
   &__bg{
     img{
       max-width: 100%;
+      width: 100%;
     }
 
     @include for-992{
@@ -783,9 +829,14 @@ input{
     font-size: 16px;
     line-height: 25px;
     color: #1A2F34;
+    transition: 0.3s;
 
     @include for-550{
       font-size: 13px;
+    }
+
+    &:hover{
+      color: #FF5722;
     }
   }
 }
@@ -1032,6 +1083,16 @@ input{
       &:last-child{
         margin: 0;
       }
+
+      svg path{
+        transition: 0.3s;
+      }
+
+      &:hover{
+        svg path{
+          fill: #ff5722;
+        }
+      }
     }
 
     @media (max-width: 650px) {
@@ -1088,6 +1149,11 @@ input{
     font-size: 17px;
     line-height: 25px;
     color: #111111;
+    transition: 0.3s;
+
+    &:hover{
+      color: #FF5722;
+    }
 
     @media (max-width: 650px) {
       font-size: 15px;
@@ -1125,7 +1191,7 @@ input{
   &__subscribe-input{
     position: relative;
 
-    input{
+    input[type='text']{
       display: block;
       width: 100%;
       height: 45px;
@@ -1142,9 +1208,13 @@ input{
         line-height: 20px;
         color: #828282;
       }
+
+      &.error{
+        border: 1px solid red;
+      }
     }
 
-    a{
+    input[type='submit']{
       display: block;
       position: absolute;
       top: 50%;
@@ -1152,6 +1222,9 @@ input{
       transform: translateY(-50%);
       width: 20px;
       height: 20px;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
       background: url("../img/svg/Send.svg") center center no-repeat;
     }
   }

@@ -47,20 +47,21 @@ footer.footer
     .footer__right
       .footer__subscribe
         .footer__subscribe-title Подпишитесь на рассылку
-        .footer__subscribe-input
-          input(type='text' placeholder='Введите ваш Email')
-          a(href="#")
+        form
+          .footer__subscribe-input
+            input(type='text' placeholder='Введите ваш Email')
+            input(type="submit" value='').footer__subscribe-input-send
       .footer__txt Depending on the company, a user experience designer may need to be a jack of all trades
       .footer__partners
         .footer__partners-item
           a(href="#").footer__partners-link
-            img(src="./img/Nova_Poshta.png")
+            img(src="./img/Nova_Poshta.png" alt='img')
         .footer__partners-item
           a(href="#").footer__partners-link
-            img(src="./img/Old_Visa_Logo.png")
+            img(src="./img/Old_Visa_Logo.png" alt='img')
         .footer__partners-item
           a(href="#").footer__partners-link
-            img(src="./img/Mastercard-logo.png")
+            img(src="./img/Mastercard-logo.png" alt='img')
 
     .footer__bottom
       .footer__social
@@ -72,39 +73,39 @@ footer.footer
           include ../../img/svg/Instagraminst.svg
       .footer__rights All rights reserved. © 2020.
 
-.popup.callback
-  .popup__body
-    .popup__inner
-      .popup__close
-        .popup__close-ico
-      .popup__content.callback__content.site-container
-        .callback__img.b-lazy.webp-img(data-webp="./img/popup-img.webp"
-          data-webp-mobile=""
-          data-img="./img/popup-img.jpg"
-          data-img-mobile="")
-
-        .callback__form
-          .top-block__form-inner
-            .top-block__form-title Оставить заявку <b>НА БЕСПЛАТНУЮ</b> консультацию нарколога
-            form.top-block__form-i
-              input(type="text" placeholder="Ваше имя" required)
-              input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
-              .site-btn--img-wrap
-                button(style='display: none;')
-                a(href="#").top-block__form-btn.site-btn--red.site-btn--img отправить
-                  picture
-                    source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
-                    source(srcset="./img/icon/blokno-ico.png" type="image/png")
-                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" width="100" height="93")
-            .top-block__form-capt Ваши данные не попадут к третьим лицам и останутся конфиденциальны.
-
-          .callback__logo
-            picture
-              source(srcset="./img/logopraktik.webp" type="image/webp")
-              source(srcset="./img/logopraktik.png" type="image/png")
-              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" width="159")
-
-
+//.popup.callback
+//  .popup__body
+//    .popup__inner
+//      .popup__close
+//        .popup__close-ico
+//      .popup__content.callback__content.site-container
+//        .callback__img.b-lazy.webp-img(data-webp="./img/popup-img.webp"
+//          data-webp-mobile=""
+//          data-img="./img/popup-img.jpg"
+//          data-img-mobile="")
+//
+//        .callback__form
+//          .top-block__form-inner
+//            .top-block__form-title Оставить заявку <b>НА БЕСПЛАТНУЮ</b> консультацию нарколога
+//            form.top-block__form-i
+//              input(type="text" placeholder="Ваше имя" required)
+//              input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
+//              .site-btn--img-wrap
+//                button(style='display: none;')
+//                a(href="#").top-block__form-btn.site-btn--red.site-btn--img отправить
+//                  picture
+//                    source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
+//                    source(srcset="./img/icon/blokno-ico.png" type="image/png")
+//                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" width="100" height="93")
+//            .top-block__form-capt Ваши данные не попадут к третьим лицам и останутся конфиденциальны.
+//
+//          .callback__logo
+//            picture
+//              source(srcset="./img/logopraktik.webp" type="image/webp")
+//              source(srcset="./img/logopraktik.png" type="image/png")
+//              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" width="159")
+//
+//
 
         //.site-form-submit
           .site-form-submit__title Ваша заявка принята

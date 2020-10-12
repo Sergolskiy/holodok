@@ -162,7 +162,9 @@ header.header
                     a(href="#").header__submenu-link Название подкатегории
 
               .header__submenu-img
-                img(src='./img/menu-img.png' alt='img')
+                //img(src='./img/menu-img.png' alt='img')
+                picture
+                  img(class='b-lazy' data-blazy-menu='./img/menu-img.png' src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt='img')
                 a(href='#') Перейти
 
           li.header__menu-item
