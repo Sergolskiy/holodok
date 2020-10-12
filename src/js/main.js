@@ -121,6 +121,21 @@ $(document).ready(function () {
   });
 
 
+  $('.product-card__tab-item').click()
+  $(document).on('click', '.product-card__tab-item', function (e) {
+    $('.product-card__tab-item').removeClass('active');
+    $(this).addClass('active');
+    $('.product-card__tab-content-item').removeClass('active');
+    $('.product-card__tab-item').each(function(index, item){
+      if($(item).hasClass('active')){
+        $('.product-card__tab-content-item:eq('+ index +')').addClass('active');
+      }
+    });
+
+    bLazy.revalidate();
+  });
+
+
 
   //
   //
