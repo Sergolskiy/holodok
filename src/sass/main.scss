@@ -1205,6 +1205,10 @@ input{
 
   &__count{
     margin: 10px 0;
+
+    @include for-550{
+      margin: 5px 0;
+    }
   }
 
   &__no-stock{
@@ -1412,6 +1416,7 @@ input{
     }
 
     &.active{
+      color: #304659;
       border-color: #304659;
     }
 
@@ -1469,6 +1474,17 @@ input{
     .product__inner {
       padding: 0px 0 10px;
     }
+  }
+}
+
+.catalog-sort{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+  margin-top: 20px;
+
+  &__count{
+    margin-left: 35px;
   }
 }
 
@@ -2450,4 +2466,61 @@ input{
     right: auto;
     margin-right: 0;
   }
+}
+
+
+.select2{
+
+  .select2-selection{
+    border: 0;
+    font-size: 12px;
+    color: #1A2F34;
+  }
+
+
+  .select2-selection__arrow{
+
+    &:after{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 6px;
+      background: url("../img/svg/arrow-bottom.svg") center center no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    b{
+      display: none;
+    }
+  }
+
+  &.select2-container--open{
+    .select2-selection__arrow{
+      &:after {
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+    }
+  }
+}
+
+.select2-container--default .select2-results__option {
+  background-color: #fdfafa;
+  font-size: 12px;
+  line-height: 183.85%;
+  display: flex;
+  align-items: center;
+  color: #1A2F34;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #1a2f34;
+}
+
+.select2 .select2-selection,
+.select2-container,
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  outline: 0;
 }
