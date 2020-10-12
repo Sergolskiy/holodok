@@ -1,0 +1,105 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Product card page";
+  - var pageClass = "";
+  - var pageActive = "product-card-page";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Каталог
+        a(href="#").breadcrumbs__item Категория
+        a(href="javascript:void(0);").breadcrumbs__item Подкатегория
+
+    .product-card
+      .product-card__inner.site-container
+        .product-card__content
+          .product-card__slider
+            .product-card__slider-big
+              .product-card__slider-label
+                .product-card__slider-label-i ХИТ ПРОДАЖ
+              .product-card__slider-main
+                .product-card__slider-main-inner.product-card-slider-js
+                  .product-card__slider-main-item
+                    .product-card__slider-main-item-content
+                      img(data-blazy="./img/product-detail-big.jpg " src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-main-item
+                    .product-card__slider-main-item-content
+                      img(data-blazy="./img/bunner.webp " src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-main-item
+                    .product-card__slider-main-item-content
+                      img(data-blazy="./img/product.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-main-item
+                    .product-card__slider-main-item-content
+                      img(data-blazy="./img/product-detail-big.jpg " src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+            .product-card__slider-small
+              .product-card__slider-sub
+                .product-card__slider-sub-inner.product-card-navslider-js
+                  .product-card__slider-sub-item
+                    .product-card__slider-sub-item-content
+                      img(data-blazy="./img/product-detail-small.jpg " src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-sub-item
+                    .product-card__slider-sub-item-content
+                      img(data-blazy="./img/bunner.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-sub-item
+                    .product-card__slider-sub-item-content
+                      img(data-blazy="./img/product.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+                  .product-card__slider-sub-item
+                    .product-card__slider-sub-item-content
+                      img(data-blazy="./img/product-detail-small.jpg " src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" ).b-lazy
+
+          .product-card__info
+            .product-card__title НАЗВАНИЕ ТОВАРА
+            .product-card__undertitle
+              .product-card__article Артикул: 12312
+              .product-card__availability
+                span.green-circle
+                |В наличии
+            a(href="#").product-card__reviews 6 отзывов
+            .product-card__property
+              .product-card__property-row.size
+                .product-card__property-col
+                  .product-card__property-name Размер:
+                .product-card__property-col
+                  .product-card__property-list
+                    .product-card__property-item
+                      a(href="#") S
+                    .product-card__property-item.active
+                      a(href="#") M
+                    .product-card__property-item
+                      a(href="#") L
+                    .product-card__property-item
+                      a(href="#") XL
+              .product-card__property-row.color
+                .product-card__property-col
+                  .product-card__property-name Цвет:
+                .product-card__property-col
+                  .product-card__property-list
+                    .product-card__property-item
+                      a(href="#" style='background-color: #2A90A9;')
+                    .product-card__property-item
+                      a(href="#" style='background-color: #DEC910;')
+                    .product-card__property-item
+                      a(href="#" style='background-color: #B6B6B6;')
+              .product-card__property-row.count
+                .product-card__property-col
+                  .product-card__property-name Колличество:
+                .product-card__property-col
+                  .product-card__property-count.counter
+                    span.minus.counter__minus -
+                    input(type="text" name="quantity" value="1" ).counter__input
+                    span.plus.counter__plus +
+              .product-card__price
+                span 6007
+                | грн
+              .product-card__btn
+                a(href="#").product-card__btn-favorites Добавить в избранное
+                  include ../img/svg/favorites-ico.svg
+                a(href="#").product-card__btn-i.site-btn В корзину
+
+
+

@@ -84,6 +84,31 @@ $(document).ready(function () {
     }
   });
 
+  $('.product-card-slider-js').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.product-card-navslider-js'
+  });
+  $('.product-card-navslider-js').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.product-card-slider-js',
+    arrows: false,
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+  });
+
+  $('.product-card-slider-js, .product-card-navslider-js').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      setTimeout(function () {
+        bLazy.revalidate();
+      },200);
+  });
+
+
+
 
   //
   //
