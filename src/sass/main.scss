@@ -164,6 +164,25 @@ input{
   }
 }
 
+.site-btn{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #F5F9FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  width: 100%;
+  background: #FF5722;
+  transition: .3s;
+
+  &:hover{
+    background: #1A2F34;
+  }
+}
+
 .section-title{
   font-weight: 600;
   font-size: 23px;
@@ -2004,14 +2023,38 @@ input{
   &__property{
     display: flex;
     flex-direction: column;
+    margin-bottom: 36px;
   }
 
   &__property-row{
     display: flex;
+    margin-bottom: 25px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    .product__count{
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0 6px;
+    }
+
+    .product__count-input{
+      font-family: 'CenturyGothic', sans-serif;
+      font-weight: 600;
+      margin-left: 0;
+      margin-right: 3px;
+    }
   }
 
   &__property-col{
     display: flex;
+
+
+    &:first-child{
+      min-width: 140px;
+    }
   }
 
   &__property-name{
@@ -2035,27 +2078,83 @@ input{
       align-items: center;
       letter-spacing: 0.05em;
       color: #1A2F34;
+      justify-content: center;
+      min-width: 23px;
+      min-height: 23px;
+      border: 1px solid transparent;
+      padding: 0 3px;
+      transition: .3s;
+    }
+
+
+    &.active a{
+      border: 1px solid #FF5722;
+    }
+
+    &:hover a{
+      border: 1px solid #fdc8b7;
     }
   }
 
-  &__property-row.color &__property-item a{
-    
+  &__property-row.color &__property-item a span{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
   }
 
   &__price{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: lowercase;
+    color: #1A2F34;
+    margin-bottom: 45px;
 
+    span{
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 47px;
+      color: #1A2F34;
+      margin-right: 4px;
+    }
   }
 
   &__btn{
-
+    display: flex;
+    align-items: center;
   }
 
   &__btn-favorites{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1A2F34;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    margin-right: 58px;
 
+    svg{
+      margin-left: 10px;
+
+      path{
+        transition: .3s;
+      }
+    }
+
+    &:hover{
+      color: #FF5722;
+
+      svg path{
+        fill: #FF5722;
+      }
+    }
   }
 
   &__btn-i{
-
+    max-width: 192px;
   }
 
 

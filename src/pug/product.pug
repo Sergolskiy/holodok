@@ -80,26 +80,31 @@ block content
                 .product-card__property-col
                   .product-card__property-list
                     .product-card__property-item
-                      a(href="#" style='background-color: #2A90A9;')
+                      a(href="#")
+                        span(style='background-color: #2A90A9;')
+                    .product-card__property-item.active
+                      a(href="#")
+                        span(style='background-color: #DEC910;')
                     .product-card__property-item
-                      a(href="#" style='background-color: #DEC910;')
-                    .product-card__property-item
-                      a(href="#" style='background-color: #B6B6B6;')
+                      a(href="#")
+                        span(style='background-color: #B6B6B6;')
               .product-card__property-row.count
                 .product-card__property-col
                   .product-card__property-name Колличество:
                 .product-card__property-col
-                  .product-card__property-count.counter
-                    span.minus.counter__minus -
-                    input(type="text" name="quantity" value="1" ).counter__input
-                    span.plus.counter__plus +
-              .product-card__price
-                span 6007
-                | грн
-              .product-card__btn
-                a(href="#").product-card__btn-favorites Добавить в избранное
-                  include ../img/svg/favorites-ico.svg
-                a(href="#").product-card__btn-i.site-btn В корзину
+                  .product-card__property-count.product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+            .product-card__price
+              span 6007
+              | грн
+            .product-card__btn
+              a(href="#").product-card__btn-favorites Добавить в избранное
+                include ../img/svg/favorites-ico.svg
+              a(href="#").product-card__btn-i.site-btn В корзину
 
 
 

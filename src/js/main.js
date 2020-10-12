@@ -111,6 +111,11 @@ $(document).ready(function () {
       },200);
   });
 
+  $(document).on('click', '.product-card__property-item > a', function (e) {
+    e.preventDefault();
+    $(this).closest('.product-card__property-list').find('.product-card__property-item').removeClass('active');
+    $(this).closest('.product-card__property-item').addClass('active');
+  });
 
 
 
