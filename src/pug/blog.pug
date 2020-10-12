@@ -38,3 +38,27 @@ block content
                   .blog__item-title Название новости в 1 или несколько строк
                   .blog__item-desc Описание новости в несколько строк, обычно в 3 строки Описание новости в несколько строк, обычно в 3 строки.
 
+          .pagination
+            .pagination__inner
+              .pagination__item
+                a(href='#').pagination__link.pagination__link--left
+                  include ../img/svg/arrow-paginate.svg
+              .pagination__item
+                a(href='#').pagination__link.active 1
+              .pagination__item
+                a(href='#').pagination__link 2
+              .pagination__item
+                a(href='#').pagination__link 3
+              .pagination__item
+                a(href='#').pagination__link 4
+              .pagination__item
+                a(href='#').pagination__link 5
+              .pagination__item
+                a(href='#').pagination__link 6
+              .pagination__item
+                a(href='#').pagination__link 7
+              .pagination__item
+                span.pagination__dots ...
+              .pagination__item
+                a(href='#').pagination__link.pagination__link--right
+                  include ../img/svg/arrow-paginate.svg
