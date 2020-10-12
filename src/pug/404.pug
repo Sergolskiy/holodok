@@ -1,0 +1,101 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Блог
+
+
+    .error-page
+      .error-page__inner.site-container
+        .error-page__img
+          include ../img/svg/404.svg
+        a(href="#").error-page__btn.site-btn Перейти на главную страницу
+
+
+    .products
+      .site-container.products__inner
+        .section-title.error-page__title Популярные товары
+        .products__items.products__items-slider
+          .products__item.product
+            .product__inner
+              .product__img
+                a(href="#")
+                  img(src='./img/product.webp' alt='img')
+              .product__in-stock В наличии
+              a(href="#").product__like.product__like--active
+                include ../img/svg/satarFill.svg
+              a(href='#').product__title Название товара Название  12133  товара Название товара
+              a(href="#").product__revievs 6 отзывов
+              .product__bottom
+                .product__price 6090
+                  span грн
+                a(href="#").product__add-cart Добавить в
+                  include ../img/svg/cart.svg
+          .products__item.product
+            .product__inner
+              .product__img
+                a(href="#")
+                  img(src='./img/product.webp' alt='img')
+              .product__in-stock В наличии
+              a(href="#").product__like
+                include ../img/svg/satarFill.svg
+              a(href='#').product__title Название товара Название  12133  товара Название товара
+              a(href="#").product__revievs 6 отзывов
+              .product__bottom
+                .product__price 6090
+                  span грн
+                a(href="#").product__add-cart Добавить в
+                  include ../img/svg/cart.svg
+          .products__item.product
+            .product__inner
+              .product__img
+                a(href="#")
+                  img(src='./img/product.webp' alt='img')
+              .product__in-stock В наличии
+              a(href="#").product__like
+                include ../img/svg/satarFill.svg
+              a(href='#').product__title Название товара Название  12133  товара Название товара
+              a(href="#").product__revievs 6 отзывов
+              .product__bottom
+                .product__price 6090
+                  span грн
+                a(href="#").product__add-cart Добавить в
+                  include ../img/svg/cart.svg
+          .products__item.product
+            .product__inner
+              .product__img
+                a(href="#")
+                  img(src='./img/product.webp' alt='img')
+              .product__in-stock В наличии
+              a(href="#").product__like
+                include ../img/svg/satarFill.svg
+              a(href='#').product__title Название товара Название  12133  товара Название товара
+              a(href="#").product__revievs 6 отзывов
+              .product__bottom
+                .product__price 6090
+                  span грн
+                a(href="#").product__add-cart Добавить в
+                  include ../img/svg/cart.svg
+
+        a(href="#").products__all-link Показать все
+
+
+
+
+
