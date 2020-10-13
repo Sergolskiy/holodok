@@ -1,0 +1,49 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Блог
+
+    .cart
+      .cart__inner.site-container
+        .cart__left
+          .cart__product
+            .cart__product-img
+              img(src="./product.png" alt="img")
+            .cart__product-col
+              .cart__product-title Название товара Название  12133  товара Название товара
+              .cart__product-article Артикул: 12312
+              .cart__product-in-stock В наличии
+            .cart__product-col
+              .cart__product-old 7500 грн
+              .cart__product-price 6090
+                span грн
+              .cart__product-like Добавить в
+            .cart__product-col
+              .cart__product-size Размер:
+              .cart__product-count Колличество:
+              .cart__product-color Цвет:
+            a(href="#").cart__product-remove
+              include ../img/svg/close.svg
+        .cart__right
+          .cart__summ
+
+
+
+
