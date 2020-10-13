@@ -1,0 +1,11 @@
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mail icon">
+<path id="Layer 1" fill-rule="evenodd" clip-rule="evenodd" d="M11.1484 26.5656H2.75V86.2056H86.75V26.5656H78.3484V33.7843L49.9957 56.7753L44.7789 52.6056L39.5622 56.7753L11.1484 33.7347V26.5656Z" fill="#DDDDDD" stroke="#1A2F34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Layer 2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M86.75 27.5274L86 27.5274L49.9622 56.7754L44.75 52.6057L39.5378 56.7754L3.5 27.5274H2.75" fill="#DDDDDD"/>
+<path d="M86.75 27.5274L86 27.5274L49.9622 56.7754L44.75 52.6057L39.5378 56.7754L3.5 27.5274H2.75" stroke="#1A2F34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Layer 3" fill-rule="evenodd" clip-rule="evenodd" d="M44.75 52.6056L2.75 86.2056H86.75L44.75 52.6056Z" fill="#DDDDDD" stroke="#1A2F34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Layer 4" fill-rule="evenodd" clip-rule="evenodd" d="M78.3484 33.7843V2.20557H11.1484V33.7347L39.5623 56.7753L44.779 52.6056L49.9957 56.7753L78.3484 33.7843Z" fill="white" stroke="#1A2F34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
