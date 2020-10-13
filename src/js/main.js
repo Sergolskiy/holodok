@@ -96,7 +96,15 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     fade: true,
-    asNavFor: '.product-card-navslider-js'
+    asNavFor: '.product-card-navslider-js',
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          dots: true
+        }
+      },
+    ]
   });
   $('.product-card-navslider-js').slick({
     slidesToShow: 3,
@@ -164,6 +172,72 @@ $(document).ready(function () {
       },300);
     });
   }
+
+  /*validation start*/
+  $(document).on('click', '.site-form-submit-js', function(e){
+    e.preventDefault();
+    if($(this).closest('form').find('input[type="tel"]').length != 0) {
+        var inputTel = $(this).closest('form').find('input[type="tel"]');
+        if (inputTel.val().indexOf('_') === -1 && inputTel.val() != 0) {
+        $(inputTel).closest('.contacts-page__form-row').addClass('correct');
+        $(inputTel).closest('.contacts-page__form-row').removeClass('error-field');
+        } else {
+        $(inputTel).closest('.contacts-page__form-row').addClass('error-field');
+        $(inputTel).closest('.contacts-page__form-row').removeClass('correct');
+        }
+    }
+
+    if($(this).closest('form').find('input[type="email"].required').length != 0) {
+      var reg = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
+
+      var input = $(this).closest('form').find('input[type="email"].required');
+      var email = $(this).closest('form').find('input[type="email"].required').length > 0
+        ? $(this).closest('form').find('input[type="email"].required')
+        : false;
+
+
+      if (email.val() == "" && email !== false) {
+        email.closest('.site-form__row').addClass('error-field');
+
+      } else {
+        if (reg.test(email.val()) == false) {
+          email.closest('.site-form__row').addClass('error-field');
+          email.closest('.site-form__row').removeClass('correct');
+
+        } else {
+          email.closest('.site-form__row').addClass('correct');
+          email.closest('.site-form__row').removeClass('error-field');
+        }
+      }
+    }
+
+    $(this).closest('form').find('input[type="text"].required').each(function () {
+      if($(this).val() === ''){
+        $(this).closest('.site-form__row').addClass('error-field');
+        $(this).closest('.site-form__row').removeClass('correct');
+      } else {
+        $(this).closest('.site-form__row').addClass('correct');
+        $(this).closest('.site-form__row').removeClass('error-field');
+      }
+    });
+
+    $(this).closest('form').find('textarea.required').each(function () {
+      if($(this).val() === ''){
+        $(this).closest('.site-form__row').addClass('error-field');
+        $(this).closest('.site-form__row').removeClass('correct');
+      } else {
+        $(this).closest('.site-form__row').addClass('correct');
+        $(this).closest('.site-form__row').removeClass('error-field');
+      }
+    });
+
+    if($(this).closest('form').find('.error-field').length == 0 && ($(this).closest('form').find('.required').length === 0 || $(this).closest('form').find('.correct').length > 0)){
+      $(this).closest('form').find('.correct').removeClass('correct');
+      $(this).siblings('input[type="submit"]').click();
+    }
+  });
+
+  /*validation end*/
 
 
 
