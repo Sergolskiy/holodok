@@ -195,7 +195,7 @@ input{
 
   form{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   &__title{
@@ -203,6 +203,7 @@ input{
     flex-direction: column;
     align-items: center;
     margin-bottom: 15px;
+    width: 100%;
 
     span{
       font-weight: 600;
@@ -220,11 +221,59 @@ input{
 
   &__row{
     margin-bottom: 14px;
+    width: 100%;
+  }
+
+  &__row--many{
+    display: flex;
+  }
+
+  &__col-content{
+    display: flex;
+    margin: 0 -4px;
+    width: 100%;
+  }
+
+  &__col-content > &__row{
+    padding: 0 4px;
+    width: 100%;
+  }
+
+  &__big-col{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+
+  &__big-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    box-sizing: content-box;
+    padding: 0 15px;
+
+    &--mini{
+      width: 100%;
+      max-width: 400px;
+    }
   }
 
   &__input{
     display: flex;
     width: 100%;
+    position: relative;
+
+    label{
+      height: 42px;
+      display: flex;
+      align-items: center;
+      min-width: 145px;
+      padding-right: 15px;
+      font-size: 14px;
+      line-height: 20px;
+    }
 
     input{
       width: 100%;
@@ -236,9 +285,12 @@ input{
       font-size: 13px;
       line-height: 16px;
       color: #828282;
-      background: #FFFFFF;
       border: 0.5px solid rgba(83, 83, 83, 0.4);
       box-sizing: border-box;
+
+      &::placeholder{
+        color: #828282;
+      }
     }
   }
 
@@ -257,9 +309,97 @@ input{
       font-size: 13px;
       line-height: 16px;
       color: #828282;
-      background: #FFFFFF;
       border: 0.5px solid rgba(83, 83, 83, 0.4);
       box-sizing: border-box;
+
+      &::placeholder{
+        color: #828282;
+      }
+    }
+  }
+
+  &__col-label{
+    height: 42px;
+    display: flex;
+    align-items: center;
+    min-width: 145px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 15px;
+  }
+
+  &__select{
+    height: 100%;
+
+    .select2-container{
+      border: 0.5px solid rgba(83, 83, 83, 0.4);
+      width: 100% !important;
+      height: 42px !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .select2 .select2-selection{
+      height: 30px;
+    }
+
+    .select2-selection__rendered{
+      height: 42px;
+      display: flex!important;
+      align-items: center;
+      padding: 0 17px !important;
+      font-family: Lato, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 20px!important;
+      color: #828282!important;
+    }
+  }
+
+  &__checkbox{
+    display: flex;
+    padding-top: 18px;
+
+    input{
+      display: none;
+    }
+
+    label{
+      position: relative;
+      padding-left: 40px;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 0.25px solid #000000;
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        background: #FF5722;
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        top: 4px;
+        opacity: 0;
+      }
+    }
+
+    input[type="checkbox"]:checked + label:after{
+      opacity: 1;
     }
   }
 
@@ -3387,6 +3527,160 @@ input{
 
 }
 
+.personal{
+  &__inner{
+
+  }
+
+  &__title{
+
+  }
+
+  &__content{
+    display: flex;
+  }
+
+  &__nav{
+    max-width: 220px;
+    width: 100%;
+    display: flex;
+  }
+
+  &__nav-list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav-item{
+    display: flex;
+    font-size: 15px;
+    line-height: 24px;
+    color: #111111;
+    margin-bottom: 20px;
+    transition: .3s;
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: transparent;
+      transition: .3s;
+    }
+
+    &.active{
+      font-weight: 600;
+      color: #FF5722;
+
+      &:after{
+        background: #FF5722;
+      }
+    }
+  }
+
+  &__section{
+    padding-left: 80px;
+    width: 100%;
+  }
+
+  &__section-wrap{
+
+  }
+
+  &__section{
+
+  }
+
+  &__section-inner{
+
+  }
+
+  &__section-title-mob{
+    @include from-992{
+      display: none;
+    }
+  }
+
+  .site-form__btn-i{
+    max-width: 192px;
+  }
+
+  &__btn-tab1{
+    margin-left: auto;
+    margin-top: 15px;
+  }
+
+  &__address-delivery{
+    .site-form {
+      max-width: 482px;
+    }
+
+    .site-form__btn-i{
+      margin-top: 40px;
+    }
+  }
+
+  &__table-section{
+    position: relative;
+  }
+
+  &__sorting{
+    position: absolute;
+    right: 0;
+    top: -40px;
+  }
+
+  &__table{
+
+    table{
+      width: 100%;
+
+      th{
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        color: #111111;
+        text-align: start;
+        padding: 10px;
+      }
+
+      td{
+        font-size: 14px;
+        line-height: 20px;
+        color: #626262;
+        padding: 10px;
+
+        &.green{
+          color: #55D340;
+        }
+      }
+
+      th:last-child,
+      td:last-child{
+        width: 185px;
+      }
+    }
+  }
+
+  &__table-wrap{
+
+  }
+
+  &__pass-section{
+    background: red;
+    .site-form{
+      max-width: 405px;
+    }
+  }
+
+
+
+}
+
+
 
 .products__items-slider {
   .slick-dots{
@@ -3550,6 +3844,12 @@ input{
     padding: 36px 73px 43px;
     background: #FFFFFF;
     border-radius: 10px;
+
+    @include for-550{
+      padding: 20px 15px;
+      max-width: 290px;
+      position: relative;
+    }
   }
 }
 

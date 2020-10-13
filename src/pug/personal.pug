@@ -1,0 +1,181 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Personal page";
+  - var pageClass = "";
+  - var pageActive = "personal-page";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Личный кабинет
+
+    .personal
+      .personal__inner.site-container
+        .personal__title.site-title.tablet ЛИЧНЫЙ КАБИНЕТ
+        .personal__content
+          .personal__nav
+            .personal__nav-list
+              a(href="javascript:void(0)").personal__nav-item.active Персональные данные
+              a(href="javascript:void(0)").personal__nav-item Адрес доставки
+              a(href="javascript:void(0)").personal__nav-item История заказов
+              a(href="javascript:void(0)").personal__nav-item Изменение пароля
+
+          .personal__section-wrap
+            .personal__section
+              .personal__section-item
+                .personal__section-title-mob Персональные данные
+                .site-form
+                  form
+                    .site-form__big-col
+                      .site-form__big-row
+                        .site-form__row
+                          .site-form__input
+                            label Имя
+                            input(type="text" placeholder="Александр").required
+                        .site-form__row
+                          .site-form__input
+                            label Фамилия
+                            input(type="text" placeholder="Гармаш")
+                        .site-form__row.site-form__row--many
+                          .site-form__col-label
+                            label Дата рождения
+                          .site-form__col-content
+                            .site-form__row
+                              .site-form__select
+                                select.select-two
+                                  option(value="" disabled selected hidden) Month
+                                  option(value='Январь') Январь
+                                  option(value='Февраль') Февраль
+                            .site-form__row
+                              .site-form__select
+                                select.select-two
+                                  option(value="" disabled selected hidden) Day
+                                  option(value='01') 01
+                                  option(value='02') 02
+                            .site-form__row
+                              .site-form__select
+                                select.select-two
+                                  option(value="" disabled selected hidden) Year
+                                  option(value='1989') 1989
+                                  option(value='1990') 1990
+
+                      .site-form__big-row.site-form__big-row--mini
+                        .site-form__row
+                          .site-form__input
+                            label Email
+                            input(type="email" placeholder="info@mail.ru")
+                        .site-form__row
+                          .site-form__input
+                            label Телефон
+                            input(type="tel" placeholder="+38(___)___-__-__").phonemask
+                        .site-form__row
+                          .site-form__checkbox
+                            input(type="checkbox" checked id="checkbox")
+                            label(for='checkbox') Даю согласие на рассылку новостей и акций
+                    .site-form__row
+                      input(type="submit" style="display: none;")
+                      a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js.personal__btn-tab1 Сохранить
+
+              .personal__section-item.personal__address-delivery
+                .personal__section-title-mob Адрес доставки
+                .site-form
+                  form
+                    .site-form__row
+                      .site-form__input
+                        label Ваш город
+                        input(type="text" placeholder="Киев")
+                    .site-form__row
+                      .site-form__input
+                        label Индекс
+                        input(type="text" placeholder="91212")
+                    .site-form__row
+                      .site-form__input
+                        label Улица
+                        input(type="text" placeholder="Шевченко")
+                    .site-form__row
+                      .site-form__input
+                        label Дом
+                        input(type="text" placeholder="23")
+                    .site-form__row
+                      .site-form__input
+                        label Подъезд
+                        input(type="text" placeholder="3")
+                    .site-form__row
+                      .site-form__input
+                        label Квартира
+                        input(type="text" placeholder="123")
+
+                    .site-form__row
+                      input(type="submit" style="display: none;")
+                      a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Сохранить
+
+              .presonal__section-item
+                .personal__section-title-mob История заказов
+                .personal__table-section
+                  .personal__sorting
+                    select.select-two
+                      option(value='Сначала новые') Сначала новые
+                      option(value='Сначала популярные') Сначала популярные
+                      option(value='От низкой цены') От низкой цены
+
+                  .personal__table
+                    .personal__table-wrap
+                      table
+                        tr
+                          th Номер заказа
+                          th Дата заказа
+                          th Сумма заказа
+                          th Статус заказа
+                        tr
+                          td 21312
+                          td 12/12/2020
+                          td 21231 грн
+                          td.green Доставлено
+                        tr
+                          td 21312
+                          td 12/12/2020
+                          td 21231 грн
+                          td В обработке
+                        tr
+                          td 21312
+                          td 12/12/2020
+                          td 21231 грн
+                          td.green Доставлено
+                        tr
+                          td 21312
+                          td 12/12/2020
+                          td 21231 грн
+                          td В обработке
+
+
+              .presonal__section-item.presonal__pass-section
+                .personal__section-title-mob Изменение пароля
+                .site-form
+                  form
+                    .site-form__row
+                      .site-form__input
+                        label Старый пароль
+                        input(type="password" placeholder="")
+                    .site-form__row
+                      .site-form__input
+                        .site-form__input-ico
+                          img(src="./img/svg/zamochek.svg" alt="ico")
+                        label Старый пароль
+                        input(type="password" placeholder="")
+                        a(href="javascript:void(0);").site-form__input-show-pass
+                          img(src="./img/svg/eye.svg" alt="ico")
+                    .site-form__row
+                      .site-form__input
+                        .site-form__input-ico
+                          img(src="./img/svg/zamochek.svg" alt="ico")
+                        label Старый пароль
+                        input(type="password" placeholder="")
+                        a(href="javascript:void(0);").site-form__input-show-pass
+                          img(src="./img/svg/eye.svg" alt="ico")
+                    .site-form__row
+                      input(type="submit" style="display: none;")
+                      a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Сохранить
