@@ -255,7 +255,7 @@ input{
 
     &--mini{
       width: 100%;
-      max-width: 400px;
+      max-width: 412px;
       padding-left: 25px;
     }
   }
@@ -2843,6 +2843,11 @@ input{
 .product-card {
   &__inner {
 
+    @include from-1200{
+      padding-top: 40px;
+      padding-bottom: 11px;
+    }
+
   }
 
   &__content {
@@ -2857,6 +2862,11 @@ input{
     max-width: 540px;
     width: 100%;
 
+    @include from-1200{
+      margin-top: 10px;
+      padding-left: 33px;
+    }
+
     @include for-992{
       max-width: 100%;
       margin-bottom: 25px;
@@ -2865,6 +2875,10 @@ input{
 
   &__slider-big {
     position: relative;
+
+    @include from-1200{
+      margin-bottom: 23px;
+    }
   }
 
   &__slider-label {
@@ -2875,6 +2889,11 @@ input{
     flex-direction: column;
     align-items: flex-end;
     z-index: 3;
+
+    @include from-1200{
+      right: 23px;
+      top: 16px;
+    }
 
     @include for-550{
       top: 0;
@@ -2894,6 +2913,10 @@ input{
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+
+    @include from-1200{
+      padding: 0 8px;
+    }
 
     @include for-550 {
       font-size: 10px;
@@ -2971,8 +2994,11 @@ input{
   }
 
   &__info {
-    padding-left: 85px;
     width: 100%;
+
+    @include from-1200{
+      padding-left: 93px;
+    }
 
     @include for-1200 {
       padding-left: 20px;
@@ -3005,12 +3031,12 @@ input{
   }
 
   &__article {
-    margin-right: 17px;
+    margin-right: 24px;
     font-size: 10px;
     line-height: 16px;
     color: #535353;
     opacity: 0.6;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 
     @include for-992{
       margin-bottom: 25px;
@@ -3046,7 +3072,7 @@ input{
     color: #535353;
     padding-bottom: 21px;
     border-bottom: 1px solid rgba(202, 202, 202, .35);
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     display: flex;
     width: 100%;
 
@@ -3070,7 +3096,7 @@ input{
 
   &__property-row {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 
     @include for-992{
       margin-bottom: 17px;
@@ -3089,8 +3115,8 @@ input{
     .product__count-input {
       font-family: 'CenturyGothic', sans-serif;
       font-weight: 600;
-      margin-left: 0;
-      margin-right: 3px;
+      margin-left: 2px;
+      margin-right: 7px;
     }
   }
 
@@ -3163,7 +3189,7 @@ input{
     line-height: 30px;
     text-transform: lowercase;
     color: #1A2F34;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 
     @include for-992{
       font-size: 12px;
@@ -3260,7 +3286,7 @@ input{
 
 
   &__tab {
-    margin-top: 70px;
+    margin-top: 78px;
 
     @include for-992{
       margin-top: 25px;
@@ -3271,7 +3297,7 @@ input{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(130, 152, 171, .35);
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     @include for-992 {
       display: none;
@@ -3630,6 +3656,10 @@ input{
 
   &__inner{
     min-height: calc(100vh - 570px);
+
+    @include from-1200{
+      padding-top: 24px;
+    }
   }
 
   &__title{
@@ -3646,6 +3676,11 @@ input{
     width: 100%;
     display: flex;
 
+    @include from-1200{
+      padding-left: 14px;
+      padding-top: 8px;
+    }
+
     @include for-992{
       display: none;
     }
@@ -3661,7 +3696,7 @@ input{
     font-size: 15px;
     line-height: 24px;
     color: #111111;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     transition: .3s;
     position: relative;
     transition: .3s;
@@ -3693,7 +3728,7 @@ input{
   }
 
   &__section{
-    padding-left: 80px;
+    padding-left: 72px;
     width: 100%;
 
     @include for-1400{
@@ -3894,8 +3929,8 @@ input{
 
       th:last-child,
       td:last-child{
-        width: 135px;
-
+        width: 160px;
+        
         @include for-550{
           width: auto;
         }
@@ -3916,7 +3951,18 @@ input{
       }
 
       .mCSB_dragger_bar{
-        
+        background-color: transparent !important;
+
+        &:before{
+          content: '';
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          top: 50%;
+          background: url("../img/svg/scroll-ico.svg") center/contain no-repeat;
+          width: 16px;
+          height: 10px;
+        }
       }
     }
   }
