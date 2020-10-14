@@ -2136,6 +2136,10 @@ input{
 .about{
   margin-bottom: 95px;
 
+  @include from-1200{
+    margin-top: 38px;
+  }
+
   @include for-992{
     margin-top: 25px;
     margin-bottom: 70px;
@@ -2159,6 +2163,16 @@ input{
       flex-direction: column;
       align-items: center;
     }
+
+    @include from-1200{
+      margin-bottom: 28px;
+    }
+
+    &:nth-child(2){
+      @include from-1200{
+        margin-bottom: 88px;
+      }
+    }
   }
 
   &__txt{
@@ -2180,6 +2194,10 @@ input{
         margin-bottom: 30px;
       }
     }
+
+    @include from-1200{
+      margin-right: 13px;
+    }
   }
 
   &__title{
@@ -2194,6 +2212,10 @@ input{
       font-size: 17.2405px;
       line-height: 21px;
     }
+
+    @include from-1200{
+      margin-bottom: 30px;
+    }
   }
 
   &__img{
@@ -2205,7 +2227,12 @@ input{
     }
 
     img{
-      max-width: 95%;
+      max-width: 100%;
+    }
+
+    @include from-1200{
+      margin-right: 42px;
+      margin-top: -16px;
     }
   }
 
@@ -2930,7 +2957,7 @@ input{
   }
 
   &__menu-link{
-    font-size: 17px;
+    font-size: 14px;
     line-height: 25px;
     color: #111111;
     transition: 0.3s;
