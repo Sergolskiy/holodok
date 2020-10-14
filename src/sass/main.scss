@@ -2602,6 +2602,134 @@ input{
 }
 
 
+.contacts{
+
+  &__inner{
+
+  }
+
+  &__page-title{
+    text-align: left;
+
+    @include for-768{
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 17px;
+      line-height: 21px;
+    }
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+
+    @include for-768{
+      flex-direction: column;
+    }
+  }
+
+  &__left{
+    border-right: 1px dashed #FF5722;
+    width: 100%;
+    padding: 0 15px;
+
+    @include for-768{
+      border-bottom: 1px dashed #FF5722;
+      border-right: 0;
+      padding: 0;
+    }
+  }
+
+  &__send-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  &__img{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1A2F34;
+    margin-top: 15px;
+
+    svg{
+      @include for-768{
+        width: 35px;
+      }
+    }
+  }
+
+  &__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1A2F34;
+
+    @include for-768{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__subtitle{
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #9C9C9C;
+    margin-top: 5px;
+
+    @include for-768{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__txt{
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #1A2F34;
+    margin: 30px auto;
+
+    @include for-768{
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+
+  &__form{
+    max-width: 440px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    .site-btn{
+      max-width: 192px;
+      margin: 25px auto 0;
+
+      @include for-768{
+        max-width: 252px;
+        margin: 5px auto 0;
+      }
+    }
+  }
+
+  &__right{
+    width: 100%;
+    padding: 0 15px;
+    
+    @include for-768{
+      padding: 0;
+    }
+  }
+
+
+
+}
+
+
 
 .footer{
   padding-top: 50px;
@@ -4069,7 +4197,7 @@ input{
       }
 
       .mCSB_dragger_bar{
-        
+
       }
     }
   }

@@ -1,0 +1,65 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-container
+        a(href="#").breadcrumbs__item Главная
+        a(href="javascript:void(0);").breadcrumbs__item Наши контакты
+
+    .contacts
+      .contacts__inner.site-container
+        .site-title.contacts__page-title Наши контакты
+        .contacts__content
+          .contacts__left
+            .contacts__send-us
+              .contacts__img
+                include ../img/svg/mail.svg
+              .contacts__title Напишите нам
+              a(href="mailto:info@mail.ru").contacts__subtitle info@mail.ru
+            .contacts__txt
+              | Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни
+            .contacts__form.site-form
+              form
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Имя*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Фамилия*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Email*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Ваше сообщение")
+                .site-form__row
+                  input(type="submit" style="display: none;")
+                  a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Отправить
+          .contacts__right
+            .contacts__send-us
+              .contacts__img
+                include ../img/svg/phone.svg
+              .contacts__title Позвоните нам
+              a(href="tel:+380958932222").contacts__subtitle +38(095)893-22-22
+            .contacts__txt
+              | Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни
+
+
+
+
+
+
