@@ -4607,7 +4607,7 @@ input{
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 10px 30px 30px;
+    padding: 15px 30px 30px;
 
     @include for-550{
       padding: 25px 15px;
@@ -4768,6 +4768,70 @@ input{
       }
     }
   }
+}
+
+.application-accepted{
+
+  &__content{
+    background: #FFFFFF;
+    border-radius: 10px;
+    max-width: 270px;
+    padding-top: 35px;
+    overflow: hidden;
+  }
+
+  &__ico{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 29px;
+    padding: 0 25px;
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: #151515;
+    margin-bottom: 11px;
+    padding: 0 25px;
+  }
+
+  &__txt{
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #151515;
+    opacity: 0.7;
+    margin-bottom: 25px;
+    padding: 0 25px;
+  }
+
+  &__link{
+    width: 100%;
+    border-top: 1px solid #E5E5E5;
+  }
+
+  &__link-i{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #FF5722;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    transition: .3s;
+
+    &:hover{
+      color: white;
+      background: #1a2f34;
+    }
+  }
+
 }
 
 .select2{
