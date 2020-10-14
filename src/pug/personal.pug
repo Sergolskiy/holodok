@@ -19,16 +19,16 @@ block content
         .personal__content
           .personal__nav
             .personal__nav-list
-              a(href="javascript:void(0)").personal__nav-item.active Персональные данные
-              a(href="javascript:void(0)").personal__nav-item Адрес доставки
-              a(href="javascript:void(0)").personal__nav-item История заказов
-              a(href="javascript:void(0)").personal__nav-item Изменение пароля
+              a(href="javascript:void(0)" data-personal-tab="1").personal__nav-item.active Персональные данные
+              a(href="javascript:void(0)" data-personal-tab="2").personal__nav-item Адрес доставки
+              a(href="javascript:void(0)" data-personal-tab="3").personal__nav-item История заказов
+              a(href="javascript:void(0)" data-personal-tab="4").personal__nav-item Изменение пароля
 
           .personal__section-wrap
             .personal__section
-              .personal__section-item
+              .personal__section-item.active(data-personal-section="1")
                 .personal__section-title-mob Персональные данные
-                .site-form
+                .site-form.personal__section-item-container
                   form
                     .site-form__big-col
                       .site-form__big-row
@@ -80,9 +80,9 @@ block content
                       input(type="submit" style="display: none;")
                       a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js.personal__btn-tab1 Сохранить
 
-              .personal__section-item.personal__address-delivery
+              .personal__section-item.personal__address-delivery(data-personal-section="2")
                 .personal__section-title-mob Адрес доставки
-                .site-form
+                .site-form.personal__section-item-container
                   form
                     .site-form__row
                       .site-form__input
@@ -113,9 +113,9 @@ block content
                       input(type="submit" style="display: none;")
                       a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Сохранить
 
-              .presonal__section-item
+              .personal__section-item(data-personal-section="3")
                 .personal__section-title-mob История заказов
-                .personal__table-section
+                .personal__table-section.personal__section-item-container
                   .personal__sorting
                     select.select-two
                       option(value='Сначала новые') Сначала новые
@@ -152,30 +152,33 @@ block content
                           td В обработке
 
 
-              .presonal__section-item.presonal__pass-section
+              .personal__section-item.personal__pass-section(data-personal-section="4")
                 .personal__section-title-mob Изменение пароля
-                .site-form
+                .site-form.personal__section-item-container
                   form
                     .site-form__row
                       .site-form__input
                         label Старый пароль
-                        input(type="password" placeholder="")
+                        input(type="password" placeholder="вапвяпия34еява")
                     .site-form__row
                       .site-form__input
-                        .site-form__input-ico
-                          img(src="./img/svg/zamochek.svg" alt="ico")
-                        label Старый пароль
-                        input(type="password" placeholder="")
-                        a(href="javascript:void(0);").site-form__input-show-pass
-                          img(src="./img/svg/eye.svg" alt="ico")
+
+                        label Новый пароль
+                        .site-form__input-wrap
+                          .site-form__input-ico
+                            img(src="./img/svg/zamochek.svg" alt="ico")
+                          input(type="password" placeholder="********")
+                          a(href="javascript:void(0);").site-form__input-show-pass
+                            img(src="./img/svg/eye.svg" alt="ico")
                     .site-form__row
                       .site-form__input
-                        .site-form__input-ico
-                          img(src="./img/svg/zamochek.svg" alt="ico")
-                        label Старый пароль
-                        input(type="password" placeholder="")
-                        a(href="javascript:void(0);").site-form__input-show-pass
-                          img(src="./img/svg/eye.svg" alt="ico")
+                        label Повтор пароля
+                        .site-form__input-wrap
+                          .site-form__input-ico
+                            img(src="./img/svg/zamochek.svg" alt="ico")
+                          input(type="password" placeholder="********")
+                          a(href="javascript:void(0);").site-form__input-show-pass
+                            img(src="./img/svg/eye.svg" alt="ico")
                     .site-form__row
                       input(type="submit" style="display: none;")
-                      a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Сохранить
+                      a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-pass-js Сохранить

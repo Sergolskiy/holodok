@@ -173,6 +173,42 @@ $(document).ready(function () {
     });
   }
 
+  if($(window).width() > 992) {
+    $(document).on('click', '[data-personal-tab]', function (e) {
+      var tabNumber = $(this).attr('data-personal-tab');
+      $('[data-personal-tab]').removeClass('active');
+      $(this).addClass('active');
+
+      $('[data-personal-section]').removeClass('active');
+      $('[data-personal-section=' + tabNumber + ']').addClass('active');
+    });
+
+  } else {
+
+    $('.personal__section-item').removeClass('active');
+
+    $('.personal__section-title-mob').click(function (e) {
+
+      if($(this).closest('.personal__section-item').hasClass('active')){
+        $(this).siblings('.personal__section-item-container').slideToggle();
+        $(this).closest('.personal__section-item').removeClass('active');
+        return;
+      } else {
+        $('.personal__section-item.active .personal__section-item-container').slideToggle();
+        $('.personal__section-item').removeClass('active');
+        $(this).closest('.personal__section-item').addClass('active');
+        $(this).siblings('.personal__section-item-container').slideToggle();
+
+        setTimeout(function () {
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $('.personal__section-item.active').offset().top
+          }, 300);
+        }, 500);
+      }
+
+  });
+}
+
   /*validation start*/
   $(document).on('click', '.site-form-submit-js', function(e){
     e.preventDefault();
@@ -237,7 +273,22 @@ $(document).ready(function () {
     }
   });
 
+  $('.phonemask').inputmask("+38(999)99-99-99");
+
   /*validation end*/
+
+  $('.site-form__input-show-pass').click(function (e) {
+    if($(this).siblings('input').attr('type') == 'password') {
+      $(this).siblings('input').attr('type', 'text');
+    } else {
+      $(this).siblings('input').attr('type', 'password');
+    }
+  });
+
+  $(".personal__table-wrap").mCustomScrollbar({
+    axis:"x" // horizontal scrollbar
+  });
+
 
 
 
