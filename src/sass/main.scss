@@ -769,7 +769,7 @@ input{
   }
 
   &__bottom{
-    margin-top: 25px;
+    margin-top: 22px;
 
     @include from-992{
       display: flex;
@@ -806,6 +806,7 @@ input{
     padding: 15px;
     background: #FFFFFF;
     display: block;
+    text-transform: uppercase;
 
     @include for-992{
       font-size: 13px;
@@ -828,7 +829,13 @@ input{
     top: 47px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    //@include from-1200{
+    //  margin: 0 13px;
+    //  //width: calc(100% - 30px);
+    //  top: 57px;
+    //}
   }
 
   &__submenu-wrap{
@@ -887,7 +894,7 @@ input{
       display: flex;
       align-items: center;
       justify-content: center;
-      bottom: 75px;
+      bottom: 89px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -994,7 +1001,7 @@ input{
 }
 
 .breadcrumbs{
-  margin-top: 20px;
+  margin-top: 26px;
   margin-bottom: 34px;
 
   @include for-992{
@@ -1369,6 +1376,7 @@ input{
     color: #979797;
     padding-left: 20px;
 
+
     &:before{
       content: '';
       display: block;
@@ -1380,6 +1388,10 @@ input{
       transform: translateY(-50%);
       left: 0;
       border-radius: 50%;
+    }
+
+    &.red:before{
+      background: #FF0000;
     }
 
     @include for-1100{
@@ -1588,6 +1600,23 @@ input{
   }
 
 
+  &__favorites-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__favorites-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__favorites-options{
+    width: 100%;
+  }
 
 }
 
@@ -2022,6 +2051,10 @@ input{
 .categories{
   margin-bottom: 120px;
 
+  @include from-1200{
+    margin-top: 46px;
+  }
+
   @include for-992{
     margin-bottom: 60px;
   }
@@ -2041,7 +2074,7 @@ input{
     padding: 15px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    margin-bottom: 62px;
 
     @include for-992{
       width: 50%;
@@ -2060,6 +2093,12 @@ input{
     padding: 35px 0;
     background: linear-gradient(180deg, #FBFBFB 0%, rgba(251, 251, 251, 0) 118.44%);
     margin-bottom: 20px;
+
+    @include from-1200{
+      padding: 0;
+      height: 208px;
+      margin-bottom: 24px;
+    }
   }
 
   &__title{
@@ -2067,7 +2106,7 @@ input{
     font-size: 18.0032px;
     line-height: 23px;
     color: #1A2F34;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     @include for-420{
       font-size: 16px;
@@ -2080,7 +2119,7 @@ input{
     font-size: 14.8752px;
     line-height: 19px;
     color: #1A2F34;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 
     &:last-child{
       margin-bottom: 0;
@@ -2918,7 +2957,9 @@ input{
   }
 
   &__subscribe{
-
+    form{
+      position: relative;
+    }
   }
 
   &__subscribe-title{
@@ -2971,6 +3012,53 @@ input{
       border: 0;
       cursor: pointer;
       background: url("../img/svg/Send.svg") center center no-repeat;
+    }
+  }
+
+  &__subscribe-success{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+
+    &.active{
+      display: block;
+    }
+
+    svg{
+      height: 100%;
+      margin-left: -26px;
+      margin-right: -20px;
+    }
+
+    span{
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 25px;
+      color: #0F0F0F;
+      border-radius: 10px;
+    }
+
+    a{
+      max-width: 110px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: right;
+      color: #F5F9FC;
+      background: #FF5722;
+      border-radius: 0px 10px 10px 0px;
+      padding: 0 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
   }
 

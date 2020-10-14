@@ -36,20 +36,40 @@ block content
                     img(src='./img/product.webp' alt='img')
                 a(href='#').product__title Название товара Название  12133  товара Название товара
                 .product__bottom.product__bottom--column
-                  .product__price 6090
-                    span грн
-                  .product__count
-                    a(href='#').product__count-minus
-                      include ../img/svg/plus.svg
-                    input(type='text' value='1').product__count-input
-                    a(href='#').product__count-plus
-                      include ../img/svg/plus.svg
-                  a(href="#").product__add-cart Добавить в
-                    include ../img/svg/cart.svg
+                  .product__favorites-price
+                    .cart__product-old 7500 грн
+                    .product__price 6090
+                      span грн
+                  .product__favorites-options
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Размер
+                          option(value='S') S
+                          option(value='M') M
+                          option(value='L') L
+                          option(value='XL') XL
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Цвет
+                          option(value='S') синий
+                          option(value='M') желтый
+                          option(value='L') серый
+                  .product__favorites-btn
+                    .product__count
+                      a(href='#').product__count-minus
+                        include ../img/svg/plus.svg
+                      input(type='text' value='1').product__count-input
+                      a(href='#').product__count-plus
+                        include ../img/svg/plus.svg
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+
             .products__item.product
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  2
+                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -57,20 +77,40 @@ block content
                     img(src='./img/product.webp' alt='img')
                 a(href='#').product__title Название товара Название  12133  товара Название товара
                 .product__bottom.product__bottom--column
-                  .product__price 6090
-                    span грн
-                  .product__count
-                    a(href='#').product__count-minus
-                      include ../img/svg/plus.svg
-                    input(type='text' value='1').product__count-input
-                    a(href='#').product__count-plus
-                      include ../img/svg/plus.svg
-                  a(href="#").product__add-cart Добавить в
-                    include ../img/svg/cart.svg
+                  .product__favorites-price
+                    .cart__product-old 7500 грн
+                    .product__price 6090
+                      span грн
+                  .product__favorites-options
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Размер
+                          option(value='S') S
+                          option(value='M') M
+                          option(value='L') L
+                          option(value='XL') XL
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Цвет
+                          option(value='S') синий
+                          option(value='M') желтый
+                          option(value='L') серый
+                  .product__favorites-btn
+                    .product__count
+                      a(href='#').product__count-minus
+                        include ../img/svg/plus.svg
+                      input(type='text' value='1').product__count-input
+                      a(href='#').product__count-plus
+                        include ../img/svg/plus.svg
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+
             .products__item.product
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  3
+                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -78,20 +118,40 @@ block content
                     img(src='./img/product.webp' alt='img')
                 a(href='#').product__title Название товара Название  12133  товара Название товара
                 .product__bottom.product__bottom--column
-                  .product__price 6090
-                    span грн
-                  .product__count
-                    a(href='#').product__count-minus
-                      include ../img/svg/plus.svg
-                    input(type='text' value='1').product__count-input
-                    a(href='#').product__count-plus
-                      include ../img/svg/plus.svg
-                  a(href="#").product__add-cart Добавить в
-                    include ../img/svg/cart.svg
+                  .product__favorites-price
+                    .cart__product-old 7500 грн
+                    .product__price 6090
+                      span грн
+                  .product__favorites-options
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Размер
+                          option(value='S') S
+                          option(value='M') M
+                          option(value='L') L
+                          option(value='XL') XL
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Цвет
+                          option(value='S') синий
+                          option(value='M') желтый
+                          option(value='L') серый
+                  .product__favorites-btn
+                    .product__count
+                      a(href='#').product__count-minus
+                        include ../img/svg/plus.svg
+                      input(type='text' value='1').product__count-input
+                      a(href='#').product__count-plus
+                        include ../img/svg/plus.svg
+                    a(href="#").product__add-cart Добавить в
+                      include ../img/svg/cart.svg
+
             .products__item.product.no-stock
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  4
+                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -99,9 +159,12 @@ block content
                     img(src='./img/product.webp' alt='img')
                 a(href='#').product__title Название товара Название  12133  товара Название товара
                 .product__bottom.product__bottom--column
-                  .product__price 6090
-                    span грн
+                  .product__favorites-price
+                    .cart__product-old 7500 грн
+                    .product__price 6090
+                      span грн
                   .product__no-stock Нет в наличии
+
 
 
 
