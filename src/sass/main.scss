@@ -237,13 +237,13 @@ input{
   &__col-content > &__row{
     padding: 0 4px;
     width: 100%;
+    margin-bottom: 0;
   }
 
   &__big-col{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 0 -15px;
   }
 
   &__big-row{
@@ -252,11 +252,11 @@ input{
     flex-direction: column;
     max-width: 450px;
     box-sizing: content-box;
-    padding: 0 15px;
 
     &--mini{
       width: 100%;
       max-width: 400px;
+      padding-left: 25px;
     }
   }
 
@@ -269,10 +269,19 @@ input{
       height: 42px;
       display: flex;
       align-items: center;
-      min-width: 145px;
+      max-width: 145px;
+      width: 100%;
       padding-right: 15px;
       font-size: 14px;
       line-height: 20px;
+
+      @include for-550{
+
+        height: 33px;
+        max-width: 91px;
+        font-size: 9px;
+        line-height: 13px;
+      }
     }
 
     input{
@@ -287,11 +296,49 @@ input{
       color: #828282;
       border: 0.5px solid rgba(83, 83, 83, 0.4);
       box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+      background: transparent;
 
       &::placeholder{
         color: #828282;
       }
+
+      @include for-550{
+        height: 33px;
+        padding: 0 10px;
+        font-size: 12px;
+      }
     }
+  }
+
+  &__input-wrap{
+    position: relative;
+    width: 100%;
+
+    input{
+      padding-left: 40px;
+      padding-right: 22px;
+    }
+  }
+
+  &__input-ico{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__input-show-pass{
+    position: absolute;
+    right: 0;
+    padding-right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__textarea{
@@ -311,6 +358,7 @@ input{
       color: #828282;
       border: 0.5px solid rgba(83, 83, 83, 0.4);
       box-sizing: border-box;
+      background: transparent;
 
       &::placeholder{
         color: #828282;
@@ -322,10 +370,20 @@ input{
     height: 42px;
     display: flex;
     align-items: center;
-    min-width: 145px;
+    max-width: 145px;
+    width: 100%;
     font-size: 14px;
     line-height: 20px;
     padding-right: 15px;
+    white-space: nowrap;
+
+    @include for-550{
+      max-width: 91px;
+      min-width: 91px;
+      font-size: 9px;
+      line-height: 13px;
+      height: 33px;
+    }
   }
 
   &__select{
@@ -335,6 +393,10 @@ input{
       border: 0.5px solid rgba(83, 83, 83, 0.4);
       width: 100% !important;
       height: 42px !important;
+
+      @include for-550{
+        height: 33px !important;
+      }
     }
 
     .select2-container--default .select2-selection--single .select2-selection__arrow{
@@ -357,6 +419,20 @@ input{
       font-size: 13px;
       line-height: 20px!important;
       color: #828282!important;
+
+      @include for-550{
+        height: 30px;
+        padding: 0 10px !important;
+        font-size: 10px;
+      }
+    }
+
+    .select2 .select2-selection__arrow:after{
+      @include for-550{
+        width: 8px;
+        height: 4px;
+        background-size: contain;
+      }
     }
   }
 
@@ -375,6 +451,12 @@ input{
       line-height: 20px;
       cursor: pointer;
 
+      @include for-550{
+        font-size: 10px;
+        line-height: 13px;
+        padding-left: 30px;
+      }
+
       &:before{
         content: '';
         position: absolute;
@@ -384,6 +466,12 @@ input{
         box-sizing: border-box;
         width: 20px;
         height: 20px;
+
+        @include for-550{
+          font-size: 14px;
+          line-height: 14px;
+          top: -2px;
+        }
       }
 
       &:after{
@@ -395,6 +483,12 @@ input{
         left: 4px;
         top: 4px;
         opacity: 0;
+
+        @include for-550{
+          font-size: 12px;
+          line-height: 8px;
+          top: 2px;
+        }
       }
     }
 
@@ -405,6 +499,11 @@ input{
 
   &__btn-i{
 
+    @include for-550 {
+      min-height: 35px;
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
 }
@@ -3681,8 +3780,9 @@ input{
 }
 
 .personal{
-  &__inner{
 
+  &__inner{
+    min-height: calc(100vh - 570px);
   }
 
   &__title{
@@ -3691,12 +3791,17 @@ input{
 
   &__content{
     display: flex;
+    justify-content: space-between;
   }
 
   &__nav{
     max-width: 220px;
     width: 100%;
     display: flex;
+
+    @include for-992{
+      display: none;
+    }
   }
 
   &__nav-list{
@@ -3712,6 +3817,8 @@ input{
     margin-bottom: 20px;
     transition: .3s;
     position: relative;
+    transition: .3s;
+    width: fit-content;
 
     &:after{
       content: '';
@@ -3732,19 +3839,60 @@ input{
         background: #FF5722;
       }
     }
+
+    &:hover{
+      color: #FF5722;
+    }
   }
 
   &__section{
     padding-left: 80px;
     width: 100%;
+
+    @include for-1400{
+      padding-left: 20px;
+    }
+
+    @include for-1200{
+      .site-form__big-col{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .site-form__big-row{
+        width: 100%;
+        max-width: 482px;
+        margin-bottom: 0;
+      }
+
+      .site-form__big-row--mini{
+        padding-left: 0;
+      }
+    }
+
+    @include for-992{
+      padding-left: 0;
+    }
   }
 
   &__section-wrap{
-
+    width: 100%;
   }
 
-  &__section{
+  &__section-item{
+    width: 100%;
 
+    &.active{
+      display: flex;
+    }
+
+    @include from-992{
+      display: none;
+    }
+
+    @include for-992{
+      flex-direction: column;
+    }
   }
 
   &__section-inner{
@@ -3752,10 +3900,73 @@ input{
   }
 
   &__section-title-mob{
-    @include from-992{
+    padding-bottom: 11px;
+    padding-top: 11px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1A2F34;
+    opacity: 0.7;
+    border-bottom: 1px solid rgba(175, 176, 176, 0.7);
+    cursor: pointer;
+    position: relative;
+    padding-right: 25px;
+    margin-bottom: 30px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 7px;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/svg/arrow-bottom-color.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: .3s;
+    }
+
+    &:before {
+      content: '';
+      bottom: -2px;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      background: 0 0;
+      z-index: 2;
+      transition: .3s;
+      background: transparent;
+      max-width: 187px;
+    }
+
+    @include from-992 {
       display: none;
     }
   }
+
+  @include for-992 {
+
+    &__section-item.active &__section-title-mob {
+
+      &:before {
+        background: #FF5722;
+      }
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__section-item-container{
+    @include for-992{
+      display: none;
+    }
+  }
+
 
   .site-form__btn-i{
     max-width: 192px;
@@ -3764,6 +3975,10 @@ input{
   &__btn-tab1{
     margin-left: auto;
     margin-top: 15px;
+
+    @include for-1200{
+      margin-left: 0;
+    }
   }
 
   &__address-delivery{
@@ -3778,15 +3993,24 @@ input{
 
   &__table-section{
     position: relative;
+    width: 100%;
   }
 
   &__sorting{
     position: absolute;
     right: 0;
     top: -40px;
+
+    @include for-992{
+      top: 0;
+    }
   }
 
   &__table{
+
+    @include for-992{
+      margin-top: 45px;
+    }
 
     table{
       width: 100%;
@@ -3798,6 +4022,11 @@ input{
         color: #111111;
         text-align: start;
         padding: 10px;
+
+        @include for-550{
+          font-size: 10px;
+          line-height: 12px;
+        }
       }
 
       td{
@@ -3806,6 +4035,11 @@ input{
         color: #626262;
         padding: 10px;
 
+        @include for-550{
+          font-size: 10px;
+          line-height: 12px;
+        }
+
         &.green{
           color: #55D340;
         }
@@ -3813,22 +4047,48 @@ input{
 
       th:last-child,
       td:last-child{
-        width: 185px;
+        width: 135px;
+
+        @include for-550{
+          width: auto;
+        }
       }
     }
   }
 
   &__table-wrap{
 
+    @include for-992{
+
+      table {
+        min-width: 500px;
+      }
+
+      .mCSB_scrollTools .mCSB_draggerRail{
+        background-color: #E9E9E9;
+      }
+
+      .mCSB_dragger_bar{
+        
+      }
+    }
   }
 
   &__pass-section{
-    background: red;
+
     .site-form{
       max-width: 405px;
     }
   }
 
+  .site-form{
+    width: 100%;
+  }
+
+
+  .site-form-pass-js{
+    margin-top: 15px;
+  }
 
 
 }
