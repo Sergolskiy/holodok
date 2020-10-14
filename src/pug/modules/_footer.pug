@@ -101,6 +101,56 @@ footer.footer
               input(type="submit" style="display: none;")
               a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Оставить отзыв
 
+.popup.basket-popup
+  .popup__body
+    .popup__inner
+      .popup__close
+        .popup__close-ico
+      .popup__content.basket-popup__content
+        .basket-popup__head
+          img(src="../../img/svg/basket-popup-check.svg" width="21" height="21")
+          | Товар успешно добавлен в корзину
+        .basket-popup__body
+          .basket-popup__img
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/product.webp" alt="img").basket-popup__img-i.b-lazy
+          .basket-popup__info
+            .product-card__title НАЗВАНИЕ ТОВАРА
+            .product-card__undertitle
+              .product-card__article Артикул: 12312
+            .product-card__property
+              .product-card__property-row
+                .product-card__property-col
+                  .product-card__property-name Размер:
+                .product-card__property-col
+                  .product-card__property-list.size
+                    .product-card__property-item
+                      a(href="#") M
+              .product-card__property-row
+                .product-card__property-col
+                  .product-card__property-name Цвет:
+                .product-card__property-col
+                  .product-card__property-list.color
+                    .product-card__property-item
+                      a(href="#")
+                        span(style='background-color: #DEC910;')
+              .product-card__property-row
+                .product-card__property-col
+                  .product-card__property-name Колличество:
+                .product-card__property-col
+                  .product-card__property-count.product__count
+                    a(href='#').product__count-minus
+                      include ../../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../../img/svg/plus.svg
+            .product-card__price
+              span 6007
+              | грн
+            .product-card__btn
+              a(href="#").product-card__btn-i.site-btn Перейти в корзину
+              a(href="#").product-card__btn-i.site-btn.site-btn--black Продолжить покупки
+
+
 
 
 
