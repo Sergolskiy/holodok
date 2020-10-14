@@ -646,10 +646,18 @@ input{
       margin-right: 20px;
       display: none;
     }
+
+    @media (max-width: 1100px) and (min-width: 992px) {
+      margin-right: 7px;
+    }
   }
 
   &__user{
     margin-right: 30px;
+
+    @media (max-width: 1100px) and (min-width: 992px) {
+      margin-right: 7px;
+    }
 
     svg path{
       transition: 0.3s;
@@ -765,6 +773,22 @@ input{
         right: -9px;
         font-size: 10px;
       }
+    }
+  }
+
+  &__cart-money{
+    top: -4px;
+    position: relative;
+
+
+    @media (max-width: 992px) and (min-width: 768px) {
+      display: block;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+
+    @include for-768{
+      display: none;
     }
   }
 
