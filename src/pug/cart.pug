@@ -67,6 +67,83 @@ block content
                           span(style='background-color: #B6B6B6;')
               .cart__product-col
                 .cart__product-old 7500 грн
+                .cart__product-price.discount 6090
+                  span грн
+                .cart__product-like
+                  a(href="#").product__add-cart Добавить в
+                    include ../img/svg/satarFill.svg
+              .cart__product-col
+                .cart__product-size Размер:
+                  .product-card__property-list.size
+                    .product-card__property-item
+                      a(href="#") S
+                    .product-card__property-item.active
+                      a(href="#") M
+                    .product-card__property-item
+                      a(href="#") L
+                    .product-card__property-item
+                      a(href="#") XL
+                .cart__product-count Колличество:
+                  .product-card__property-count.product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+                .cart__product-color Цвет:
+                  .product-card__property-list.color
+                    .product-card__property-item
+                      a(href="#")
+                        span(style='background-color: #2A90A9;')
+                    .product-card__property-item.active
+                      a(href="#")
+                        span(style='background-color: #DEC910;')
+                    .product-card__property-item
+                      a(href="#")
+                        span(style='background-color: #B6B6B6;')
+              a(href="#").cart__product-remove
+                include ../img/svg/close.svg
+            .cart__product
+              .cart__product-img
+                a(href="#")
+                  img(src="./img/product.png" alt="img")
+              .cart__product-col
+                a(href="#").cart__product-title Название товара Название  12133  товара Название товара
+                .cart__product-article Артикул: 12312
+                .cart__product-in-stock
+                  .product-card__availability
+                    span.green-circle
+                    | В наличии
+                .tablet
+                  .cart__product-size Размер:
+                    .product-card__property-list.size
+                      .product-card__property-item
+                        a(href="#") S
+                      .product-card__property-item.active
+                        a(href="#") M
+                      .product-card__property-item
+                        a(href="#") L
+                      .product-card__property-item
+                        a(href="#") XL
+                  .cart__product-count Колличество:
+                    .product-card__property-count.product__count
+                      a(href='#').product__count-minus
+                        include ../img/svg/plus.svg
+                      input(type='text' value='1').product__count-input
+                      a(href='#').product__count-plus
+                        include ../img/svg/plus.svg
+                  .cart__product-color Цвет:
+                    .product-card__property-list.color
+                      .product-card__property-item
+                        a(href="#")
+                          span(style='background-color: #2A90A9;')
+                      .product-card__property-item.active
+                        a(href="#")
+                          span(style='background-color: #DEC910;')
+                      .product-card__property-item
+                        a(href="#")
+                          span(style='background-color: #B6B6B6;')
+              .cart__product-col
                 .cart__product-price 6090
                   span грн
                 .cart__product-like
@@ -106,6 +183,12 @@ block content
           .cart__right
             .cart__summ
               .cart__summ-title Итого:
+              .cart__summ-promocode
+                a(href="#").cart__summ-promocode-link Есть промокод?
+                .cart__summ-promocode-block
+                  .site-form__input
+                    input(type="text" placeholder="Введите промокод*").cart__summ-promocode-input
+                  input(type='submit' value='Применить промокод').cart__summ-promocode-input.site-btn--black
               .cart__summ-row
                 .cart__summ-name Итого:
                 .cart__summ-price 13160 грн

@@ -91,6 +91,11 @@ $(document).ready(function () {
     minimumResultsForSearch: -1
   });
 
+  $('.cart__summ-promocode-link').click(function (e) {
+    e.preventDefault();
+    $('.cart__summ-promocode-block').slideToggle();
+  })
+
   $('.product-card-slider-js').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
