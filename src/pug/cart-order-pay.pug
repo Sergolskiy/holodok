@@ -34,20 +34,28 @@ block content
           .cart__left
             .cart__order
               .cart__order-title.site-title ОПЛАТА
-              .cart__order-form.site-form
-                form
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Владелец карты").required
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Номер карты").required
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="мм/гг*").required
-                  .site-form-submit-js(style="display: none;")
+                .cart__order-form
+                  .cart__pay.custom-tab
+                    .custom-tab__head Выберите способ оплаты
+                    .custom-tab__body
+                      .cart__pay-item
+                        a(href="#").cart__pay-link Наложенный платеж
+                      .cart__pay-item
+                        a(href="#").cart__pay-link Картой Visa/MasterCard онлайн
+              //.cart__order-form.site-form
+                //form
+                //  .site-form__row
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="Владелец карты").required
+                //  .site-form__row
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="Номер карты").required
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="мм/гг*").required
+                //  .site-form-submit-js(style="display: none;")
 
 
           .cart__right
