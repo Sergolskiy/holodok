@@ -2170,6 +2170,11 @@ input{
     line-height: 23px;
     color: #1A2F34;
     margin-bottom: 20px;
+    transition: .3s;
+
+    &:hover{
+      color: #FF5722;
+    }
 
     @include for-420{
       font-size: 16px;
@@ -2183,6 +2188,14 @@ input{
     line-height: 19px;
     color: #1A2F34;
     margin-bottom: 12px;
+    transition: .3s;
+    padding-left: 0;
+
+
+    &:hover{
+      color: #FF5722;
+      padding-left: 10px;
+    }
 
     &:last-child{
       margin-bottom: 0;

@@ -69,7 +69,7 @@ gulp.task('css-libs', () => {
       // 'node_modules/bootstrap/dist/css/bootstrap.css',
       // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
       // 'node_modules/lightbox2/dist/css/lightbox.min.css',
-      // 'node_modules/aos/dist/aos.css',
+      'node_modules/aos/dist/aos.css',
       // 'node_modules/magnific-popup/dist/magnific-popup.css'
       'node_modules/select2/dist/css/select2.css',
       'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
@@ -86,7 +86,7 @@ gulp.task('js-libs', () => {
   return gulp.src([
       'node_modules/jquery/dist/jquery.min.js',
       // 'node_modules/lightbox2/dist/js/lightbox.min.js',
-      // 'node_modules/aos/dist/aos.js',
+      'node_modules/aos/dist/aos.js',
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       // 'node_modules/rellax/rellax.js',

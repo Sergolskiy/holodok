@@ -343,6 +343,8 @@ $(document).ready(function () {
 
   $(document).scroll();
 
+  AOS.init({disable: 'mobile'});
+
   //
   // $('.header__menu-btn').click(function () {
   //   $(this).toggleClass('open');
