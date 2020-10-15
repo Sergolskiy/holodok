@@ -233,13 +233,13 @@ $(document).ready(function () {
   $(document).on('click', '.site-form-submit-js', function(e){
     e.preventDefault();
     if($(this).closest('form').find('input[type="tel"]').length != 0) {
-        var inputTel = $(this).closest('form').find('input[type="tel"]');
-        if (inputTel.val().indexOf('_') === -1 && inputTel.val() != 0) {
-        $(inputTel).closest('.contacts-page__form-row').addClass('correct');
-        $(inputTel).closest('.contacts-page__form-row').removeClass('error-field');
+      var inputTel = $(this).closest('form').find('input[type="tel"]');
+      if (inputTel.val().indexOf('_') === -1 && inputTel.val() != 0) {
+        $(inputTel).closest('.site-form__row').addClass('correct');
+        $(inputTel).closest('.site-form__row').removeClass('error-field');
         } else {
-        $(inputTel).closest('.contacts-page__form-row').addClass('error-field');
-        $(inputTel).closest('.contacts-page__form-row').removeClass('correct');
+        $(inputTel).closest('.site-form__row').addClass('error-field');
+        $(inputTel).closest('.site-form__row').removeClass('correct');
         }
     }
 
@@ -286,6 +286,27 @@ $(document).ready(function () {
         $(this).closest('.site-form__row').removeClass('error-field');
       }
     });
+
+    if($(this).closest('form').find('.error-field').length == 0 && ($(this).closest('form').find('.required').length === 0 || $(this).closest('form').find('.correct').length > 0)){
+      $(this).closest('form').find('.correct').removeClass('correct');
+      $(this).siblings('input[type="submit"]').click();
+    }
+  });
+
+  $(document).on('click', '.site-form-pass-js', function(e){
+    e.preventDefault();
+
+    $(this).closest('form').find('input[type="password"].required').each(function () {
+
+      if($(this).val().length < 4){
+        $(this).closest('.site-form__row').addClass('error-field');
+        $(this).closest('.site-form__row').removeClass('correct');
+      } else {
+        $(this).closest('.site-form__row').addClass('correct');
+        $(this).closest('.site-form__row').removeClass('error-field');
+      }
+    });
+
 
     if($(this).closest('form').find('.error-field').length == 0 && ($(this).closest('form').find('.required').length === 0 || $(this).closest('form').find('.correct').length > 0)){
       $(this).closest('form').find('.correct').removeClass('correct');

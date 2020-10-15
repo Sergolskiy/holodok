@@ -35,11 +35,11 @@ block content
                         .site-form__row
                           .site-form__input
                             label Имя
-                            input(type="text" placeholder="Александр").required
+                            input(type="text" placeholder="Имя").required
                         .site-form__row
                           .site-form__input
                             label Фамилия
-                            input(type="text" placeholder="Гармаш")
+                            input(type="text" placeholder="Фамилия").required
                         .site-form__row.site-form__row--many
                           .site-form__col-label
                             label Дата рождения
@@ -47,19 +47,19 @@ block content
                             .site-form__row
                               .site-form__select
                                 select.select-two
-                                  option(value="" disabled selected hidden) Month
+                                  option(value="" disabled selected hidden) Месяц
                                   option(value='Январь') Январь
                                   option(value='Февраль') Февраль
                             .site-form__row
                               .site-form__select
                                 select.select-two
-                                  option(value="" disabled selected hidden) Day
+                                  option(value="" disabled selected hidden) День
                                   option(value='01') 01
                                   option(value='02') 02
                             .site-form__row
                               .site-form__select
                                 select.select-two
-                                  option(value="" disabled selected hidden) Year
+                                  option(value="" disabled selected hidden) Год
                                   option(value='1989') 1989
                                   option(value='1990') 1990
 
@@ -67,11 +67,11 @@ block content
                         .site-form__row
                           .site-form__input
                             label Email
-                            input(type="email" placeholder="info@mail.ru")
+                            input(type="email" placeholder="info@gmail.com").required
                         .site-form__row
                           .site-form__input
                             label Телефон
-                            input(type="tel" placeholder="+38(___)___-__-__").phonemask
+                            input(type="tel" placeholder="+38(___)___-__-__").phonemask.required
                         .site-form__row
                           .site-form__checkbox
                             input(type="checkbox" checked id="checkbox")
@@ -87,27 +87,27 @@ block content
                     .site-form__row
                       .site-form__input
                         label Ваш город
-                        input(type="text" placeholder="Киев")
+                        input(type="text" placeholder="Киев").required
                     .site-form__row
                       .site-form__input
                         label Индекс
-                        input(type="text" placeholder="91212")
+                        input(type="text" placeholder="91212").required
                     .site-form__row
                       .site-form__input
                         label Улица
-                        input(type="text" placeholder="Шевченко")
+                        input(type="text" placeholder="Шевченко").required
                     .site-form__row
                       .site-form__input
                         label Дом
-                        input(type="text" placeholder="23")
+                        input(type="text" placeholder="23").required
                     .site-form__row
                       .site-form__input
                         label Подъезд
-                        input(type="text" placeholder="3")
+                        input(type="text" placeholder="3").required
                     .site-form__row
                       .site-form__input
                         label Квартира
-                        input(type="text" placeholder="123")
+                        input(type="text" placeholder="123").required
 
                     .site-form__row
                       input(type="submit" style="display: none;")
@@ -131,22 +131,26 @@ block content
                           th Сумма заказа
                           th Статус заказа
                         tr
-                          td 21312
+                          td
+                            a(href="#") 21312
                           td 12/12/2020
                           td 21231 грн
                           td.green Доставлено
                         tr
-                          td 21312
+                          td
+                            a(href="#") 21312
                           td 12/12/2020
                           td 21231 грн
                           td В обработке
                         tr
-                          td 21312
+                          td
+                            a(href="#") 21312
                           td 12/12/2020
                           td 21231 грн
                           td.green Доставлено
                         tr
-                          td 21312
+                          td
+                            a(href="#") 21312
                           td 12/12/2020
                           td 21231 грн
                           td В обработке
@@ -159,7 +163,7 @@ block content
                     .site-form__row
                       .site-form__input
                         label Старый пароль
-                        input(type="password" placeholder="вапвяпия34еява")
+                        input(type="password" placeholder="").required
                     .site-form__row
                       .site-form__input
 
@@ -167,7 +171,7 @@ block content
                         .site-form__input-wrap
                           .site-form__input-ico
                             img(src="./img/svg/zamochek.svg" alt="ico")
-                          input(type="password" placeholder="********")
+                          input(type="password" placeholder="********").required
                           a(href="javascript:void(0);").site-form__input-show-pass
                             img(src="./img/svg/eye.svg" alt="ico")
                     .site-form__row
@@ -176,7 +180,7 @@ block content
                         .site-form__input-wrap
                           .site-form__input-ico
                             img(src="./img/svg/zamochek.svg" alt="ico")
-                          input(type="password" placeholder="********")
+                          input(type="password" placeholder="********").required
                           a(href="javascript:void(0);").site-form__input-show-pass
                             img(src="./img/svg/eye.svg" alt="ico")
                     .site-form__row

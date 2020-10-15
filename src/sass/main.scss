@@ -3414,6 +3414,7 @@ input{
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    background: white;
 
     @include from-1200{
       padding: 0 8px;
@@ -3699,6 +3700,41 @@ input{
       margin-bottom: 10px;
     }
 
+    &--old{
+      display: inline-block;
+      font-size: 10px;
+      margin-left: 5px;
+      opacity: 0.5;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: calc(100% - 20px);
+        height: 1px;
+        background: #1A2F34;
+        top: calc(50% - 1px);
+        transform: translateY(-50%);
+      }
+
+      span{
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 28px;
+        color: #1A2F34;
+        margin-right: 4px;
+
+        @include for-992{
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
     &--mobile{
       display: none;
     }
@@ -3711,7 +3747,7 @@ input{
       }
     }
 
-    span {
+    > span {
       font-family: 'Lato', sans-serif;
       font-style: normal;
       font-weight: 800;
@@ -4417,6 +4453,32 @@ input{
         line-height: 20px;
         color: #626262;
         padding: 10px;
+
+        a{
+          font-weight: 600;
+          color: #FF5722;
+          position: relative;
+          width: fit-content;
+          display: flex;
+
+          &:after {
+            content: '';
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transition: .3s;
+            background: #FF5722;
+            position: absolute;
+            transition: .3s;
+          }
+
+          &:hover{
+            &:after{
+              background: transparent;
+            }
+          }
+        }
 
         @include for-550{
           font-size: 10px;
