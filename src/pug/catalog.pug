@@ -52,16 +52,115 @@ block content
               .filter__categories-item
                 a(href='#').filter__categories-link Название подкатегории
 
+          .mobile-catalog-top.tablet
+            a(href="#").mobile-catalog-top__title.filter-mob Фильтры
+            a(href="#").mobile-catalog-top__title.sort-mob Сортировать
+
+          .filter-other
+            .filter-other__block-wrap
+              .filter-other__block
+                .filter-other__name Производитель
+                .filter-other__items
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox" checked id="checkbox")
+                        label(for='checkbox') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox2")
+                        label(for='checkbox2') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox3")
+                        label(for='checkbox3') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox4")
+                        label(for='checkbox4') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox5")
+                        label(for='checkbox5') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox6")
+                        label(for='checkbox6') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox7")
+                        label(for='checkbox7') Велфарм ООО (3)
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox8")
+                        label(for='checkbox8') Велфарм ООО (3)
+
+              .filter-other__block
+                .filter-other__name Цвет
+                .filter-other__items
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox" checked id="checkbox2")
+                        label(for='checkbox2') Цвет
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox22")
+                        label(for='checkbox22') Цвет
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox23")
+                        label(for='checkbox23') Цвет
+
+              .filter-other__block
+                .filter-other__name Страна производитель
+                .filter-other__items
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox" checked id="checkbox3")
+                        label(for='checkbox3') производитель
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox32")
+                        label(for='checkbox32') производитель
+                  .filter-other__item
+                    .site-form__row
+                      .site-form__checkbox
+                        input(type="checkbox"  id="checkbox33")
+                        label(for='checkbox33') производитель
+
+              .filter-other__block
+                .filter-other__name Стоимость
+                .filter-other__item.ui-slider-wrap
+                  .ui-slider-counters
+                    input(type='text')#amount-for
+                    input(type='text')#amount-from
+                  #slider-range
+
+
         .catalog__right
-          .catalog-sort
-            .catalog-sort__popular
-              select.select-two
-                option(value='Популярные') Популярные
-                option(value='Не популярные') Не популярные
-            .catalog-sort__count
-              select.select-two
-                option(value='6') 6
-                option(value='18') 18
+
+          .catalog-sort-wrap
+            .catalog-sort
+              .catalog-sort__popular
+                select.select-two
+                  option(value='Популярные') Популярные
+                  option(value='Не популярные') Не популярные
+              .catalog-sort__count
+                select.select-two
+                  option(value='6') 6
+                  option(value='18') 18
           .products
             .products__items
               .products__item.product

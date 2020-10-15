@@ -97,6 +97,8 @@ gulp.task('js-libs', () => {
       'node_modules/slick-carousel/slick/slick.js',
       // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
       'node_modules/select2/dist/js/select2.js',
+      // 'node_modules/jquery-ui/external/requirejs/require.js',
+      // 'node_modules/jquery-ui/demos/bootstrap.js',
       'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
