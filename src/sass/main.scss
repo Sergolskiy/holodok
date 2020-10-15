@@ -3717,16 +3717,16 @@ input{
       display: inline-block;
       font-size: 10px;
       margin-left: 5px;
-      opacity: 0.5;
       position: relative;
+      color: #a9a9a9;
 
       &:before{
         content: '';
         position: absolute;
         left: 0;
-        width: calc(100% - 20px);
+        width: 100%;
         height: 1px;
-        background: #1A2F34;
+        background: #FF5722;
         top: calc(50% - 1px);
         transform: translateY(-50%);
       }
@@ -3737,8 +3737,8 @@ input{
         font-weight: 800;
         font-size: 18px;
         line-height: 28px;
-        color: #1A2F34;
         margin-right: 4px;
+        color: #a9a9a9;
 
         @include for-992{
           font-weight: 800;
