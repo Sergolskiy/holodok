@@ -74,6 +74,10 @@ footer.footer
           include ../../img/svg/Googlegoogle.svg
         a(href="#")
           include ../../img/svg/Instagraminst.svg
+      .footer__txt-mobile.tablet
+        a(href="#") Privacy policy
+        a(href="#") Term of service
+        a(href="#") Language
       .footer__rights All rights reserved. © 2020.
 
 .popup.reviews-popup
@@ -108,7 +112,7 @@ footer.footer
         .popup__close-ico
       .popup__content.basket-popup__content
         .basket-popup__head
-          img(src="../../img/svg/basket-popup-check.svg" width="21" height="21")
+          img(src="./../../img/svg/basket-popup-check.svg" width="21" height="21")
           | Товар успешно добавлен в корзину
         .basket-popup__body
           .basket-popup__img
@@ -163,6 +167,86 @@ footer.footer
         .application-accepted__txt Мы свяжемся с Вами в самое ближайшее время для решения Вашей проблемы!
         .application-accepted__link
           a(href="#").application-accepted__link-i Продолжить покупки
+
+
+.popup.auth-popup
+  .popup__body
+    .popup__inner
+      .popup__close
+        .popup__close-ico
+      .popup__content.auth-popup__content
+        .auth-popup__head
+          .auth-popup__tab
+            a(href="javascript:void(0)" data-auth-tab="1").auth-popup__tab-i.active Войти
+            a(href="javascript:void(0)" data-auth-tab="2").auth-popup__tab-i Регистрация
+        .auth-popup__body
+          .auth-popup__body-item.active(data-auth-content="1")
+            .body__form.site-form
+              form
+                .site-form__title
+                  span Войти
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Логин*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="password" placeholder="Пароль*").required
+                .site-form__row
+                  input(type="submit" style="display: none;")
+                  a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Войти
+                .site-form__row
+                  a(href="javascript:void(0)").site-form__fp Забыли пароль?
+
+            .auth-popup__social
+              .auth-popup__social-head Войти с помощью
+              .auth-popup__social-content
+                a(href="#").auth-popup__social-item
+                  img(src="./../../img/svg/facebook-login.svg" alt="ico" width="30" height="30")
+                a(href="#").auth-popup__social-item
+                  img(src="./../../img/svg/google-login.svg" alt="ico" width="30" height="30")
+          .auth-popup__body-item(data-auth-content="2")
+            .body__form.site-form
+              form
+                .site-form__title
+                  span Регистрация
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Имя*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="email" placeholder="Email*").required
+                .site-form__row
+                  .site-form__input
+                    input(type="tel" placeholder="Телефон*").phonemask.required
+                .site-form__row
+                  .site-form__input
+                    input(type="password" placeholder="Пароль*").required
+                .site-form__row
+                  input(type="submit" style="display: none;")
+                  a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Зарегестрироваться
+
+            .auth-popup__social
+              .auth-popup__social-head Войти с помощью
+              .auth-popup__social-content
+                a(href="#").auth-popup__social-item
+                  img(src="./../../img/svg/facebook-login.svg" alt="ico" width="30" height="30")
+                a(href="#").auth-popup__social-item
+                  img(src="./../../img/svg/google-login.svg" alt="ico" width="30" height="30")
+
+          .auth-popup__body-item(data-auth-content="3")
+            .body__form.site-form
+              form
+                .site-form__title
+                  span Восстановление пароля
+                .site-form__row
+                  .site-form__input
+                    input(type="email" placeholder="Email*").required
+                .site-form__row
+                  input(type="submit" style="display: none;")
+                  a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js Отправить
+
+
+
 
 
 

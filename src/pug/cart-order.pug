@@ -25,14 +25,14 @@ block content
         .cart__tabs
           //.cart__tabs-items
           .cart__tabs-item
-            a(href="#").cart__tabs-link.active ДОСТАВКА
+            a(href="#" data-cart-tab="1").cart__tabs-link.active ДОСТАВКА
           .cart__tabs-item
-            a(href="#").cart__tabs-link ОПЛАТА
+            a(href="#" data-cart-tab="2").cart__tabs-link ОПЛАТА
           .cart__tabs-item
             a(href="#").cart__tabs-link ВАШ ЗАКАЗ
         .cart__container
           .cart__left
-            .cart__order
+            .cart__order(data-cart-content="1").active
               .cart__order-title.site-title Добавьте адрес доставки
               .cart__order-form.site-form
                 form
@@ -49,40 +49,105 @@ block content
                         input(type="text" placeholder="Email*").required
                   .site-form__row
                     .site-form__col
+                      .site-form__input
+                        input(type="tel" placeholder="+38(___)___-__-__").phonemask
+
+
+                  .custom-tab
+                    .custom-tab__head Способы доставки:
+                    .custom-tab__body
+                      .custom-tab-i
+                        input(type="radio" name="cartTab" id="radio01" checked data-custom-tab="1")
+                        label(for="radio01") Новая почта (Доставка до отделения)
+                      .custom-tab-i
+                        input(type="radio" name="cartTab" id="radio02" data-custom-tab="2")
+                        label(for="radio02") Новая почта (доставка до дома)
+
+                  .custom-tab-content(data-custom-tab="1").active
+                    .site-form__row
+                      .site-form__col
+                        .site-form__select
+                          select.select-cart
+                            option(value="" disabled selected hidden) Город
+                            option(value='Киев') Киев
+                            option(value='Львов') Львов
+
+                    .site-form__row
+                      .site-form__col
+                        .site-form__select
+                          select.select-cart
+                            option(value="" disabled selected hidden) Отделение
+                            option(value='1') Отделение №1
+                            option(value='2') Отделение №2
+
+                  .custom-tab-content(data-custom-tab="2")
+                    .site-form__row
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Область*")
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Город*")
+
+                    .site-form__row
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Почтовый индекс*")
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Улица")
+
+                    .site-form__row
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Номер дома")
+                      .site-form__col
+                        .site-form__input
+                          input(type="text" placeholder="Квартира")
+
+
+                  .site-form__row
+                    .site-form__col
                       .site-form__checkbox
                         input(type="checkbox" checked id="checkbox")
                         label(for='checkbox') Я хочу подписаться на рассылку, чтобы получить приоритетный доступ к распродажам и в числе первых узнавать о главных трендах и новинках.
 
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Область*").required
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Город*").required
-
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Почтовый индекс*").required
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Улица")
-
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Номер дома")
-                    .site-form__col
-                      .site-form__input
-                        input(type="text" placeholder="Квартира")
-
-                  .site-form__row
-                    .site-form__col
-                      .site-form__input
-                        input(type="tel" placeholder="+38(___)___-__-__").phonemask
                   .site-form-submit-js(style="display: none;")
 
+
+            .cart__order(data-cart-content="2")
+              .cart__order-title.site-title ОПЛАТА
+                .cart__order-form
+                  .custom-tab
+                    .custom-tab__head Выберите способ оплаты
+                    .custom-tab__body
+                      .custom-tab-i
+                        input(type="radio" name="cartTab" id="radio04" checked)
+                        label(for="radio04") Наложенный платеж
+                      .custom-tab-i
+                        input(type="radio" name="cartTab" id="radio05" )
+                        label(for="radio05") Картой Visa/MasterCard онлайн
+                  //.cart__pay.custom-tab
+                  //  .custom-tab__head Выберите способ оплаты
+                  //  .custom-tab__body
+                  //    .cart__pay-item
+                  //      a(href="#").cart__pay-link Наложенный платеж
+                  //    .cart__pay-item
+                  //      a(href="#").cart__pay-link Картой Visa/MasterCard онлайн
+              //.cart__order-form.site-form
+                //form
+                //  .site-form__row
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="Владелец карты").required
+                //  .site-form__row
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="Номер карты").required
+                //    .site-form__col
+                //      .site-form__input
+                //        input(type="text" placeholder="мм/гг*").required
+                //  .site-form-submit-js(style="display: none;")
 
           .cart__right
             .cart__summ
