@@ -352,6 +352,17 @@ $(document).ready(function () {
     // $('[data-cart-content="1"]').removeClass('active');
     // $('[data-cart-content="2"]').addClass('active');
     // $('[data-cart-tab="2"]').addClass('active');
+    var flag = false;
+    $('.cart__order-form').find('input.required').each(function () {
+      console.log($(this));
+      if($(this).val().length === 0){
+        $(this).parent().addClass('error-field');
+        flag = true;
+      }
+    })
+    if(flag){
+      return;
+    }
 
     if($('[data-cart-content="2"]').hasClass('active')){
       location.href = './cart-order-last.html';
@@ -375,26 +386,29 @@ $(document).ready(function () {
       $(".header").addClass('scroll');
     }
   });
-
-  $( "#slider-range" ).slider({
-    range: true,
-    min: 0,
-    max: 7000,
-    values: [ 1000, 3000 ],
-    slide: function( event, ui ) {
-      $( "#amount-for" ).val( ui.values[ 0 ] );
-      $( "#amount-from" ).val( ui.values[ 1 ] );
-    }
-  });
-
-
-  $( "#amount-for" ).val( $( "#slider-range" ).slider( "values", 0 ) );
-  $( "#amount-from" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+  if( $( "#slider-range" ).length > 0 ){
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 7000,
+      values: [ 1000, 3000 ],
+      slide: function( event, ui ) {
+        $( "#amount-for" ).val( ui.values[ 0 ] );
+        $( "#amount-from" ).val( ui.values[ 1 ] );
+      }
+    });
+    $( "#amount-for" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#amount-from" ).val( $( "#slider-range" ).slider( "values", 1 ) );
 
 
-  $('#amount-for, #amount-from').focusout(function () {
-    $( "#slider-range" ).slider( "option", "values", [ parseInt($('#amount-for').val()), parseInt($('#amount-from').val()) ] );
-  })
+    $('#amount-for, #amount-from').focusout(function () {
+      $( "#slider-range" ).slider( "option", "values", [ parseInt($('#amount-for').val()), parseInt($('#amount-from').val()) ] );
+    })
+  }
+
+
+
+
 
   $('.filter-other__name').click(function () {
     $(this).next().slideToggle();

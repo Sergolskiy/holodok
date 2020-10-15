@@ -1645,6 +1645,10 @@ input{
     text-align: center;
     margin-left: 5px;
     margin-right: 8px;
+
+    @include for-992{
+      width: 30px;
+    }
   }
 
   &__count-plus{
@@ -1852,6 +1856,11 @@ input{
     font-size: 15px;
     line-height: 19px;
     color: #1A2F34;
+    transition: 0.3s;
+
+    &:hover{
+      color: #FF5722;
+    }
   }
 
 }
@@ -1871,7 +1880,7 @@ input{
 
 
   &__block{
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 
     @include for-992{
       margin-bottom: 30px;
@@ -1909,7 +1918,7 @@ input{
   }
 
   &__items{
-
+    margin-bottom: 60px;
   }
 
   &__item{
