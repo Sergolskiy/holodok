@@ -27,16 +27,27 @@ block content
           .cart__tabs-item
             a(href="#").cart__tabs-link.active ДОСТАВКА
           .cart__tabs-item
-            a(href="#").cart__tabs-link ОПЛАТА
+            a(href="#").cart__tabs-link.active ОПЛАТА
           .cart__tabs-item
-            a(href="#").cart__tabs-link.active ВАШ ЗАКАЗ
+            a(href="#").cart__tabs-link ВАШ ЗАКАЗ
         .cart__container
           .cart__left
             .cart__order
-              .cart__order-title.site-title Ваш заказ оформлен
-              .cart__order-txt
-                p хLorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков,
-              a(href="#").cart__order-success.site-btn Продолжить покупки
+              .cart__order-title.site-title ОПЛАТА
+              .cart__order-form.site-form
+                form
+                  .site-form__row
+                    .site-form__col
+                      .site-form__input
+                        input(type="text" placeholder="Владелец карты").required
+                  .site-form__row
+                    .site-form__col
+                      .site-form__input
+                        input(type="text" placeholder="Номер карты").required
+                    .site-form__col
+                      .site-form__input
+                        input(type="text" placeholder="мм/гг*").required
+
 
           .cart__right
             .cart__summ

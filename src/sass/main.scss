@@ -126,6 +126,7 @@ input{
   overflow: hidden;
   position: relative;
   min-height: 100vh;
+  padding-top: 145px;
 }
 
 .row{
@@ -525,7 +526,22 @@ input{
 }
 
 .header{
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: white;
+  transition: 0.3s;
+
+  &.scroll{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    transform: translateY(-20px);
+
+    //.header__top{
+    //  transform: translateY(-20px);
+    //}
+  }
 
   &__inner{
 
@@ -536,6 +552,7 @@ input{
     align-items: center;
     justify-content: space-between;
     padding-top: 25px;
+    transition: 0.3s;
 
     @include for-992{
       padding-top: 12px;
@@ -796,7 +813,8 @@ input{
     margin-top: 22px;
 
     @include from-992{
-      display: flex;
+      position: relative;
+      display: block;
     }
 
     @include for-992{
@@ -994,9 +1012,30 @@ input{
     margin-left: auto;
     position: relative;
 
+    @include from-992{
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 200px;
+
+      &.active{
+        max-width: 288px;
+        width: 100%;
+        padding-left: 30px;
+        background: white;
+      }
+
+      input[type='text']{
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+
     input[type="text"]{
       display: flex;
-      max-width: 190px;
+      //max-width: 190px;
       width: 100%;
       height: 40px;
       border: 1px solid #F2F2F2;
@@ -2632,7 +2671,7 @@ input{
   //}
 
   &__tabs-item{
-    width: 50%;
+    width: 33%;
 
 
     &:last-child{
@@ -3063,6 +3102,11 @@ input{
       border: 0;
       cursor: pointer;
       background: url("../img/svg/Send.svg") center center no-repeat;
+      transition: 0.3s;
+
+      &:hover{
+        background: url("../img/svg/Send-blue.svg") center center no-repeat;
+      }
     }
   }
 
@@ -3074,13 +3118,12 @@ input{
     width: 100%;
     background: white;
     overflow: hidden;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     display: none;
 
     &.active{
-      display: block;
+      display: flex;
     }
 
     svg{

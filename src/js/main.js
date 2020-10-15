@@ -210,9 +210,24 @@ $(document).ready(function () {
           }, 300);
         }, 500);
       }
+    });
+  }
 
+  $('.header__search-block input[type="text"]').focus(function () {
+    $('.header__search-block').addClass('active');
+  })
+
+  $('.header__search-block input[type="text"]').focusout(function () {
+    $('.header__search-block').removeClass('active');
   });
-}
+
+  $('.cart__summ-promocode-input[type="submit"]').click(function (e) {
+    if($(this).prev().find('input').val().length === 0) {
+      $(this).prev().addClass('error-field');
+      $(this).prev().find('input').focus();
+      e.preventDefault();
+    }
+  })
 
   /*validation start*/
   $(document).on('click', '.site-form-submit-js', function(e){
@@ -296,18 +311,17 @@ $(document).ready(function () {
 
 
 
+  $(document).scroll(function () {
+    var top = $(document).scrollTop();
+    if (top < 1) {
+      $(".header").removeClass('scroll');
+    } else {
+      $(".header").addClass('scroll');
+    }
+  });
 
-  //
-  //
-  // $(document).scroll(function () {
-  //   var top = $(document).scrollTop();
-  //   if (top < 1) {
-  //     $(".header").removeClass('scroll');
-  //     console.log(234);
-  //   } else {
-  //     $(".header").addClass('scroll');
-  //   }
-  // });
+  $(document).scroll();
+
   //
   // $('.header__menu-btn').click(function () {
   //   $(this).toggleClass('open');
