@@ -252,6 +252,76 @@ block content
                 //        span(style='background-color: #B6B6B6;')
               a(href="#").cart__product-remove
                 include ../img/svg/close.svg
+
+            .cart__product.no-stock
+              .cart__product-img
+                a(href="#")
+                  img(src="./img/product.png" alt="img")
+              .cart__product-col
+                a(href="#").cart__product-title Название товара Название  12133  товара Название товара
+                .cart__product-article Артикул: 12312
+                .cart__product-in-stock.red
+                  .product-card__availability
+                    span.green-circle
+                    | Нет в наличии
+                .tablet
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Размер
+                        option(value='S') S
+                        option(value='M') M
+                        option(value='L') L
+                        option(value='XL') XL
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Цвет
+                        option(value='S') синий
+                        option(value='M') желтый
+                        option(value='L') серый
+                  .cart__product-count Колличество:
+                    .product-card__property-count.product__count
+                      a(href='#').product__count-minus
+                        include ../img/svg/plus.svg
+                      input(type='text' value='1').product__count-input
+                      a(href='#').product__count-plus
+                        include ../img/svg/plus.svg
+              .cart__product-col
+                .cart__product-price 6090
+                  span грн
+                .cart__product-like
+                  a(href="#").product__add-cart Добавить в
+                    include ../img/svg/satarFill.svg
+              .cart__product-col
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Размер
+                      option(value='S') S
+                      option(value='M') M
+                      option(value='L') L
+                      option(value='XL') XL
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Цвет
+                      option(value='S') синий
+                      option(value='M') желтый
+                      option(value='L') серый
+                .cart__product-count Колличество:
+                  .product-card__property-count.product__count
+                    a(href='#').product__count-minus
+                      include ../img/svg/plus.svg
+                    input(type='text' value='1').product__count-input
+                    a(href='#').product__count-plus
+                      include ../img/svg/plus.svg
+              a(href="#").cart__product-remove
+                include ../img/svg/close.svg
           .cart__right
             .cart__summ
               .cart__summ-title Итого:

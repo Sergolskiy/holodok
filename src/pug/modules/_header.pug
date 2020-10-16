@@ -56,6 +56,17 @@ header.header
             //li.header__top-menu-item
             //  a(href="#").header__top-menu-link Доставка и оплата
             li.header__top-menu-item
+              .header__lang-wrap
+                a(href="#").header__lang.arrow
+                  include ../../img/svg/flag.svg
+                .header__lang-items
+                  .header__lang-item
+                    a(href="#").header__lang
+                      include ../../img/svg/flag.svg
+                  .header__lang-item
+                    a(href="#").header__lang
+                      include ../../img/svg/flag.svg
+            li.header__top-menu-item
               a(href="#").header__top-menu-link О нас
             li.header__top-menu-item
               a(href="#").header__top-menu-link Блог
@@ -67,8 +78,6 @@ header.header
             img(src='./img/svg/logo.svg' alt='img')
 
       .header__right
-        a(href="#").header__lang
-          include ../../img/svg/flag.svg
         a(href="#" data-modal-class="auth-popup").header__user
           include ../../img/svg/login.svg
         a(href="#").header__like

@@ -53,6 +53,17 @@ $(document).ready(function () {
     bLazy = new Blazy({
       src: 'data-blazy-menu' // Default is data-src
     });
+  });
+
+  $('.header__lang.arrow').click(function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('open')
+  });
+
+  $(document).on('click', function (e) {
+    if(!$(e.target).hasClass('header__lang-wrap') && $(e.target).closest('.header__lang-wrap').length === 0){
+      $('.header__lang-wrap').removeClass('open');
+    }
   })
 
   $('.header__mobile-menu').click(function () {

@@ -28,7 +28,6 @@ block content
             .products__item.product
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -69,7 +68,6 @@ block content
             .products__item.product
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -110,7 +108,6 @@ block content
             .products__item.product
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -151,7 +148,6 @@ block content
             .products__item.product.no-stock
               .product__inner
                 .product__favorites-top
-                  .product__favorites-count Товар  1
                   a(href="#").product__favorites-remove
                     include ../img/svg/close.svg
                 .product__img
@@ -163,6 +159,22 @@ block content
                     .cart__product-old 7500 грн
                     .product__price 6090
                       span грн
+                  .product__favorites-options
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Размер
+                          option(value='S') S
+                          option(value='M') M
+                          option(value='L') L
+                          option(value='XL') XL
+                    .site-form__row
+                      .site-form__select
+                        select.select-two
+                          option(value="" disabled selected hidden) Цвет
+                          option(value='S') синий
+                          option(value='M') желтый
+                          option(value='L') серый
                   .product__no-stock Нет в наличии
 
 

@@ -30,6 +30,29 @@ html(lang="ru")
 
 			include modules/_footer
 		block scripts
-			script(src='js/libs.min.js')
-			script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
-			script(src='js/main.min.js')
+			script.
+				let script = document.createElement('script');
+				let script2 = document.createElement('script');
+				let script3 = document.createElement('script');
+
+							script.src = "js/libs.min.js"
+							script2.src = "js/main.min.js"
+							script3.src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+
+							document.addEventListener("DOMContentLoaded", function() {
+							setTimeout(function(){
+							document.head.append(script);
+					}, 1)
+				});
+				script.onload = function () {
+					console.log(231);
+					document.head.append(script2);
+					document.head.append(script3);
+				};
+				script2.onload = function() {
+					console.log(2312);
+				};
+
+			//script(src='js/libs.min.js')
+			//script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+			//script(src='js/main.min.js')
