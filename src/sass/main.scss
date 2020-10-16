@@ -3964,7 +3964,7 @@ input{
   }
 
 
-  &__price--old{
+  &__price-old{
     display: inline-block;
     font-size: 10px;
     position: relative;
@@ -3972,6 +3972,7 @@ input{
     margin-bottom: 0;
     font-weight: normal;
     line-height: normal;
+    width: fit-content;
 
     &:before{
       content: '';
@@ -3984,7 +3985,7 @@ input{
       transform: translateY(-50%);
     }
 
-    span{
+    > span{
       font-family: 'Lato', sans-serif;
       font-style: normal;
       font-size: 18px;
@@ -4004,6 +4005,7 @@ input{
 
     @include for-992{
       display: none;
+      margin: 0 auto;
 
       &--mobile{
         display: block;
