@@ -56,12 +56,12 @@ block content
 
           .product-card__info
             .product-card__title НАЗВАНИЕ ТОВАРА
+            .product-card__price-old.product-card__price-old--mobile
+              span 9715
+              | грн
             .product-card__price.product-card__price--mobile
               span 6007
               | грн
-              .product-card__price--old
-                span 9715
-                | грн
             .product-card__undertitle
               .product-card__article Артикул: 12312
               .product-card__availability
@@ -122,13 +122,13 @@ block content
                     input(type='text' value='1').product__count-input
                     a(href='#').product__count-plus
                       include ../img/svg/plus.svg
+
+            .product-card__price-old
+              span 9715
+              | грн
             .product-card__price
               span 6007
               | грн
-
-              .product-card__price--old
-                span 9715
-                | грн
             .product-card__btn
               a(href="#").product-card__btn-favorites Добавить в избранное
                 include ../img/svg/favorites-ico.svg
