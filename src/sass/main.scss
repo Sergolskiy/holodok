@@ -5327,8 +5327,21 @@ input{
     margin: 0 5px;
     transition: .3s;
 
+    svg{
+      width: 35px;
+      height: 35px;
+    }
+
+    svg path{
+      transition: .3s;
+    }
+
     &:hover{
-      transform: scale(0.9);
+      //transform: scale(0.9);
+
+      svg path{
+        fill: #FF5722;
+      }
     }
   }
 }
