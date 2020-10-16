@@ -37,16 +37,34 @@ block content
                     span.green-circle
                     | В наличии
                 .tablet
-                  .cart__product-size Размер:
-                    .product-card__property-list.size
-                      .product-card__property-item
-                        a(href="#") S
-                      .product-card__property-item.active
-                        a(href="#") M
-                      .product-card__property-item
-                        a(href="#") L
-                      .product-card__property-item
-                        a(href="#") XL
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Размер
+                        option(value='S') S
+                        option(value='M') M
+                        option(value='L') L
+                        option(value='XL') XL
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Цвет
+                        option(value='S') синий
+                        option(value='M') желтый
+                        option(value='L') серый
+
+                  //.cart__product-size Размер:
+                  //  .product-card__property-list.size
+                  //    .product-card__property-item
+                  //      a(href="#") S
+                  //    .product-card__property-item.active
+                  //      a(href="#") M
+                  //    .product-card__property-item
+                  //      a(href="#") L
+                  //    .product-card__property-item
+                  //      a(href="#") XL
                   .cart__product-count Колличество:
                     .product-card__property-count.product__count
                       a(href='#').product__count-minus
@@ -54,17 +72,17 @@ block content
                       input(type='text' value='1').product__count-input
                       a(href='#').product__count-plus
                         include ../img/svg/plus.svg
-                  .cart__product-color Цвет:
-                    .product-card__property-list.color
-                      .product-card__property-item
-                        a(href="#")
-                          span(style='background-color: #2A90A9;')
-                      .product-card__property-item.active
-                        a(href="#")
-                          span(style='background-color: #DEC910;')
-                      .product-card__property-item
-                        a(href="#")
-                          span(style='background-color: #B6B6B6;')
+                  //.cart__product-color Цвет:
+                  //  .product-card__property-list.color
+                  //    .product-card__property-item
+                  //      a(href="#")
+                  //        span(style='background-color: #2A90A9;')
+                  //    .product-card__property-item.active
+                  //      a(href="#")
+                  //        span(style='background-color: #DEC910;')
+                  //    .product-card__property-item
+                  //      a(href="#")
+                  //        span(style='background-color: #B6B6B6;')
               .cart__product-col
                 .cart__product-old 7500 грн
                 .cart__product-price.discount 6090
@@ -73,16 +91,34 @@ block content
                   a(href="#").product__add-cart Добавить в
                     include ../img/svg/satarFill.svg
               .cart__product-col
-                .cart__product-size Размер:
-                  .product-card__property-list.size
-                    .product-card__property-item
-                      a(href="#") S
-                    .product-card__property-item.active
-                      a(href="#") M
-                    .product-card__property-item
-                      a(href="#") L
-                    .product-card__property-item
-                      a(href="#") XL
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Размер
+                      option(value='S') S
+                      option(value='M') M
+                      option(value='L') L
+                      option(value='XL') XL
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Цвет
+                      option(value='S') синий
+                      option(value='M') желтый
+                      option(value='L') серый
+
+                //.cart__product-size Размер:
+                //  .product-card__property-list.size
+                //    .product-card__property-item
+                //      a(href="#") S
+                //    .product-card__property-item.active
+                //      a(href="#") M
+                //    .product-card__property-item
+                //      a(href="#") L
+                //    .product-card__property-item
+                //      a(href="#") XL
                 .cart__product-count Колличество:
                   .product-card__property-count.product__count
                     a(href='#').product__count-minus
@@ -90,17 +126,17 @@ block content
                     input(type='text' value='1').product__count-input
                     a(href='#').product__count-plus
                       include ../img/svg/plus.svg
-                .cart__product-color Цвет:
-                  .product-card__property-list.color
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #2A90A9;')
-                    .product-card__property-item.active
-                      a(href="#")
-                        span(style='background-color: #DEC910;')
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #B6B6B6;')
+                //.cart__product-color Цвет:
+                //  .product-card__property-list.color
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #2A90A9;')
+                //    .product-card__property-item.active
+                //      a(href="#")
+                //        span(style='background-color: #DEC910;')
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #B6B6B6;')
               a(href="#").cart__product-remove
                 include ../img/svg/close.svg
             .cart__product
@@ -115,16 +151,34 @@ block content
                     span.green-circle
                     | В наличии
                 .tablet
-                  .cart__product-size Размер:
-                    .product-card__property-list.size
-                      .product-card__property-item
-                        a(href="#") S
-                      .product-card__property-item.active
-                        a(href="#") M
-                      .product-card__property-item
-                        a(href="#") L
-                      .product-card__property-item
-                        a(href="#") XL
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Размер
+                        option(value='S') S
+                        option(value='M') M
+                        option(value='L') L
+                        option(value='XL') XL
+
+                  .site-form__row
+                    .site-form__select
+                      select.select-two
+                        option(value="" disabled selected hidden) Цвет
+                        option(value='S') синий
+                        option(value='M') желтый
+                        option(value='L') серый
+
+                  //.cart__product-size Размер:
+                  //  .product-card__property-list.size
+                  //    .product-card__property-item
+                  //      a(href="#") S
+                  //    .product-card__property-item.active
+                  //      a(href="#") M
+                  //    .product-card__property-item
+                  //      a(href="#") L
+                  //    .product-card__property-item
+                  //      a(href="#") XL
                   .cart__product-count Колличество:
                     .product-card__property-count.product__count
                       a(href='#').product__count-minus
@@ -132,17 +186,17 @@ block content
                       input(type='text' value='1').product__count-input
                       a(href='#').product__count-plus
                         include ../img/svg/plus.svg
-                  .cart__product-color Цвет:
-                    .product-card__property-list.color
-                      .product-card__property-item
-                        a(href="#")
-                          span(style='background-color: #2A90A9;')
-                      .product-card__property-item.active
-                        a(href="#")
-                          span(style='background-color: #DEC910;')
-                      .product-card__property-item
-                        a(href="#")
-                          span(style='background-color: #B6B6B6;')
+                  //.cart__product-color Цвет:
+                  //  .product-card__property-list.color
+                  //    .product-card__property-item
+                  //      a(href="#")
+                  //        span(style='background-color: #2A90A9;')
+                  //    .product-card__property-item.active
+                  //      a(href="#")
+                  //        span(style='background-color: #DEC910;')
+                  //    .product-card__property-item
+                  //      a(href="#")
+                  //        span(style='background-color: #B6B6B6;')
               .cart__product-col
                 .cart__product-price 6090
                   span грн
@@ -150,16 +204,34 @@ block content
                   a(href="#").product__add-cart Добавить в
                     include ../img/svg/satarFill.svg
               .cart__product-col
-                .cart__product-size Размер:
-                  .product-card__property-list.size
-                    .product-card__property-item
-                      a(href="#") S
-                    .product-card__property-item.active
-                      a(href="#") M
-                    .product-card__property-item
-                      a(href="#") L
-                    .product-card__property-item
-                      a(href="#") XL
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Размер
+                      option(value='S') S
+                      option(value='M') M
+                      option(value='L') L
+                      option(value='XL') XL
+
+                .site-form__row
+                  .site-form__select
+                    select.select-two
+                      option(value="" disabled selected hidden) Цвет
+                      option(value='S') синий
+                      option(value='M') желтый
+                      option(value='L') серый
+
+                //.cart__product-size Размер:
+                //  .product-card__property-list.size
+                //    .product-card__property-item
+                //      a(href="#") S
+                //    .product-card__property-item.active
+                //      a(href="#") M
+                //    .product-card__property-item
+                //      a(href="#") L
+                //    .product-card__property-item
+                //      a(href="#") XL
                 .cart__product-count Колличество:
                   .product-card__property-count.product__count
                     a(href='#').product__count-minus
@@ -167,17 +239,17 @@ block content
                     input(type='text' value='1').product__count-input
                     a(href='#').product__count-plus
                       include ../img/svg/plus.svg
-                .cart__product-color Цвет:
-                  .product-card__property-list.color
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #2A90A9;')
-                    .product-card__property-item.active
-                      a(href="#")
-                        span(style='background-color: #DEC910;')
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #B6B6B6;')
+                //.cart__product-color Цвет:
+                //  .product-card__property-list.color
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #2A90A9;')
+                //    .product-card__property-item.active
+                //      a(href="#")
+                //        span(style='background-color: #DEC910;')
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #B6B6B6;')
               a(href="#").cart__product-remove
                 include ../img/svg/close.svg
           .cart__right

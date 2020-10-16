@@ -56,6 +56,9 @@ block content
 
           .product-card__info
             .product-card__title НАЗВАНИЕ ТОВАРА
+            .product-card__price-old.product-card__price-old--mobile
+              span 9715
+              | грн
             .product-card__price.product-card__price--mobile
               span 6007
               | грн
@@ -66,33 +69,49 @@ block content
                 |В наличии
               a(href="#").product-card__reviews 6 отзывов
             .product-card__property
-              .product-card__property-row
-                .product-card__property-col
-                  .product-card__property-name Размер:
-                .product-card__property-col
-                  .product-card__property-list.size
-                    .product-card__property-item
-                      a(href="#") S
-                    .product-card__property-item.active
-                      a(href="#") M
-                    .product-card__property-item
-                      a(href="#") L
-                    .product-card__property-item
-                      a(href="#") XL
-              .product-card__property-row
-                .product-card__property-col
-                  .product-card__property-name Цвет:
-                .product-card__property-col
-                  .product-card__property-list.color
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #2A90A9;')
-                    .product-card__property-item.active
-                      a(href="#")
-                        span(style='background-color: #DEC910;')
-                    .product-card__property-item
-                      a(href="#")
-                        span(style='background-color: #B6B6B6;')
+              .site-form__row
+                .site-form__select
+                  select.select-two
+                    option(value="" disabled selected hidden) Размер
+                    option(value='S') S
+                    option(value='M') M
+                    option(value='L') L
+                    option(value='XL') XL
+              //.product-card__property-row
+                //.product-card__property-col
+                //  .product-card__property-name Размер:
+                //.product-card__property-col
+                //  .product-card__property-list.size
+                //    .product-card__property-item
+                //      a(href="#") S
+                //    .product-card__property-item.active
+                //      a(href="#") M
+                //    .product-card__property-item
+                //      a(href="#") L
+                //    .product-card__property-item
+                //      a(href="#") XL
+
+              .site-form__row
+                .site-form__select
+                  select.select-two
+                    option(value="" disabled selected hidden) Цвет
+                    option(value='S') синий
+                    option(value='M') желтый
+                    option(value='L') серый
+              //.product-card__property-row
+                //.product-card__property-col
+                //  .product-card__property-name Цвет:
+                //.product-card__property-col
+                //  .product-card__property-list.color
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #2A90A9;')
+                //    .product-card__property-item.active
+                //      a(href="#")
+                //        span(style='background-color: #DEC910;')
+                //    .product-card__property-item
+                //      a(href="#")
+                //        span(style='background-color: #B6B6B6;')
               .product-card__property-row
                 .product-card__property-col
                   .product-card__property-name Колличество:
@@ -103,13 +122,13 @@ block content
                     input(type='text' value='1').product__count-input
                     a(href='#').product__count-plus
                       include ../img/svg/plus.svg
+
+            .product-card__price-old
+              span 9715
+              | грн
             .product-card__price
               span 6007
               | грн
-
-              .product-card__price--old
-                span 9715
-                | грн
             .product-card__btn
               a(href="#").product-card__btn-favorites Добавить в избранное
                 include ../img/svg/favorites-ico.svg
